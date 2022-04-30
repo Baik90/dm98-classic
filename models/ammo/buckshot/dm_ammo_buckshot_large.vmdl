@@ -1,0 +1,220 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc29:version{3cec427c-1b0e-4d48-a90a-0436f33a6041} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "Folder"
+						name = "box1"
+						children = 
+						[
+							{
+								_class = "RenderMeshFile"
+								name = "B1lod0"
+								filename = "models/ammo/buckshot/buckshot.fbx"
+								import_translation = [ 0.0, 0.0, 0.0 ]
+								import_rotation = [ 0.0, 0.0, 0.0 ]
+								import_scale = 1.0
+								align_origin_x_type = "None"
+								align_origin_y_type = "None"
+								align_origin_z_type = "None"
+								parent_bone = ""
+								import_filter = 
+								{
+									exclude_by_default = false
+									exception_list = [  ]
+								}
+							},
+							{
+								_class = "RenderMeshFile"
+								name = "B1lod1"
+								filename = "models/ammo/buckshot/buckshot_lod1.fbx"
+								import_translation = [ 0.0, 0.0, 0.0 ]
+								import_rotation = [ 0.0, 0.0, 0.0 ]
+								import_scale = 1.0
+								align_origin_x_type = "None"
+								align_origin_y_type = "None"
+								align_origin_z_type = "None"
+								parent_bone = ""
+								import_filter = 
+								{
+									exclude_by_default = false
+									exception_list = [  ]
+								}
+							},
+						]
+					},
+					{
+						_class = "Folder"
+						name = "box2"
+						children = 
+						[
+							{
+								_class = "RenderMeshFile"
+								name = "B2lod0"
+								filename = "models/ammo/buckshot/buckshot.fbx"
+								import_translation = [ 3.0, 15.0, 0.0 ]
+								import_rotation = [ 0.0, -60.0, 0.0 ]
+								import_scale = 1.0
+								align_origin_x_type = "None"
+								align_origin_y_type = "None"
+								align_origin_z_type = "None"
+								parent_bone = ""
+								import_filter = 
+								{
+									exclude_by_default = false
+									exception_list = 
+									[
+										"Cylinder_011",
+									]
+								}
+							},
+							{
+								_class = "RenderMeshFile"
+								name = "B2lod1"
+								filename = "models/ammo/buckshot/buckshot_lod1.fbx"
+								import_translation = [ 3.0, 15.0, 0.0 ]
+								import_rotation = [ 0.0, -60.0, 0.0 ]
+								import_scale = 1.0
+								align_origin_x_type = "None"
+								align_origin_y_type = "None"
+								align_origin_z_type = "None"
+								parent_bone = ""
+								import_filter = 
+								{
+									exclude_by_default = false
+									exception_list = 
+									[
+										"Cylinder_007",
+									]
+								}
+							},
+						]
+					},
+					{
+						_class = "Folder"
+						name = "shell2"
+						children = 
+						[
+							{
+								_class = "RenderMeshFile"
+								name = "shell2lod0"
+								filename = "models/ammo/buckshot/buckshot.fbx"
+								import_translation = [ 3.0, 12.0, -3.1 ]
+								import_rotation = [ 0.0, -30.0, 75.0 ]
+								import_scale = 1.0
+								align_origin_x_type = "None"
+								align_origin_y_type = "None"
+								align_origin_z_type = "None"
+								parent_bone = ""
+								import_filter = 
+								{
+									exclude_by_default = false
+									exception_list = 
+									[
+										"Cylinder_013",
+										"Cube_001",
+									]
+								}
+							},
+							{
+								_class = "RenderMeshFile"
+								name = "shell2lod1"
+								filename = "models/ammo/buckshot/buckshot_lod1.fbx"
+								import_translation = [ 3.0, 12.0, -3.1 ]
+								import_rotation = [ 0.0, -30.0, 75.0 ]
+								import_scale = 1.0
+								align_origin_x_type = "None"
+								align_origin_y_type = "None"
+								align_origin_z_type = "None"
+								parent_bone = ""
+								import_filter = 
+								{
+									exclude_by_default = false
+									exception_list = 
+									[
+										"Cylinder_013",
+										"Cube_001",
+										"Cube_009",
+									]
+								}
+							},
+						]
+					},
+				]
+			},
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = ""
+						surface_prop = "default"
+						collision_group = ""
+						collision_interact_as = ""
+						collision_interact_with = ""
+						collision_interact_exclude = ""
+						origin = [ 2.892751, 7.804632, 6.148942 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 14.707529, 27.381496, 12.313031 ]
+					},
+				]
+			},
+			{
+				_class = "MaterialGroupList"
+				children = 
+				[
+					{
+						_class = "DefaultMaterialGroup"
+						remaps = 
+						[
+							{
+								from = "buckshotbox.vmat"
+								to = "materials/ammo/buckshot/buckshotbox.vmat"
+							},
+						]
+						use_global_default = false
+						global_default_material = ""
+					},
+				]
+			},
+			{
+				_class = "LODGroupList"
+				children = 
+				[
+					{
+						_class = "LODGroup"
+						switch_threshold = 0.0
+						meshes = 
+						[
+							"B1lod0",
+							"B2lod0",
+							"shell2lod0",
+						]
+					},
+					{
+						_class = "LODGroup"
+						switch_threshold = 50.0
+						meshes = 
+						[
+							"B1lod1",
+							"B2lod1",
+							"shell2lod1",
+						]
+					},
+				]
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = ""
+		base_model_name = ""
+	}
+}
