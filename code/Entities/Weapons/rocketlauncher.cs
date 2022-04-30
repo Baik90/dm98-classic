@@ -1,17 +1,17 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-[Library( "dm_crossbow", Title = "Crossbow" )]
-[Hammer.EditorModel( "weapons/rust_crossbow/rust_crossbow.vmdl" )]
-[Display( Name = "Crossbow" )]
-partial class Crossbow : DeathmatchWeapon
+[Library( "dmc_rocketlauncher", Title = "Rocketlauncher" )]
+[Hammer.EditorModel( "models/weapons/rocketlauncher/w_rocketlauncher.vmdl" )]
+[Display( Name = "Rocketlauncher" )]
+partial class Rocketlauncher : DeathmatchWeapon
 {
-	public static readonly Model WorldModel = Model.Load( "weapons/rust_crossbow/rust_crossbow.vmdl" );
-	public override string ViewModelPath => "weapons/rust_crossbow/v_rust_crossbow.vmdl";
+	public static readonly Model WorldModel = Model.Load( "models/weapons/rocketlauncher/w_rocketlauncher.vmdl" );
+	public override string ViewModelPath => "models/weapons/rocketlauncher/v_rocketlauncher.vmdl";
 
 	public override float PrimaryRate => 1;
-	public override int Bucket => 0;
-	public override int BucketWeight => 600;
-	public override AmmoType AmmoType => AmmoType.Crossbow;
+	public override int Bucket => 1;
+	public override int BucketWeight => 200;
+	public override AmmoType AmmoType => AmmoType.Rocket;
 	public override int ClipSize => 5;
 
 	[Net, Predicted]
@@ -46,11 +46,11 @@ partial class Crossbow : DeathmatchWeapon
 
 		if ( IsServer )
 		{
-			var bolt = new CrossbowBolt();
+			var bolt = new Rocket();
 			bolt.Position = Owner.EyePosition;
 			bolt.Rotation = Owner.EyeRotation;
 			bolt.Owner = Owner;
-			bolt.Velocity = Owner.EyeRotation.Forward * 100;
+			bolt.Velocity = Owner.EyeRotation.Forward * 1;
 		}
 	}
 
@@ -92,5 +92,10 @@ partial class Crossbow : DeathmatchWeapon
 
 		ViewModelEntity?.SetAnimParameter( "fire", true );
 		CrosshairPanel?.CreateEvent( "fire" );
+	}
+	public override void SimulateAnimator( PawnAnimator anim )
+	{
+		anim.SetAnimParameter( "holdtype", 3 ); // TODO this is shit
+		anim.SetAnimParameter( "aim_body_weight", 1.0f );
 	}
 }

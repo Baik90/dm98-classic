@@ -13,7 +13,8 @@ partial class GrenadeWeapon : DeathmatchWeapon
 	public override float ReloadTime => 1.0f;
 	public override AmmoType AmmoType => AmmoType.Grenade;
 	public override int ClipSize => 1;
-	public override int Bucket => 5;
+	public override int Bucket => 0;
+	public override int BucketWeight => 500;
 
 	public override void Spawn()
 	{

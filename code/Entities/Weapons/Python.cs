@@ -14,7 +14,7 @@ partial class Python : DeathmatchWeapon
 	public override int ClipSize => 6;
 	public override AmmoType AmmoType => AmmoType.Python;
 
-	public override int Bucket => 1;
+	public override int Bucket => 0;
 	public override int BucketWeight => 200;
 
 	[Net, Predicted]

@@ -71,14 +71,25 @@ partial class Ammo9mmBox : BaseAmmo
 
 
 [Library( "dm_ammobuckshot" )]
-[EditorModel( "models/dm_ammo_buckshot.vmdl" )]
+[EditorModel( "models/ammo/buckshot/dm_ammo_buckshot.vmdl" )]
 [Display( Name = "Ammo - Buckshot" )]
 partial class AmmoBuckshot : BaseAmmo
 {
 	public override AmmoType AmmoType => AmmoType.Buckshot;
-	public override int AmmoAmount => 12;
+	public override int AmmoAmount => 20;
 
-	public override Model WorldModel => Model.Load( "models/dm_ammo_buckshot.vmdl" );
+	public override Model WorldModel => Model.Load( "models/ammo/buckshot/dm_ammo_buckshot.vmdl" );
+}
+
+[Library( "dmc_ammobuckshotlarge" )]
+[EditorModel( "models/ammo/buckshot/dm_ammo_buckshot_large.vmdl" )]
+[Display( Name = "Ammo - Buckshot Large" )]
+partial class AmmoBuckshotLarge : BaseAmmo
+{
+	public override AmmoType AmmoType => AmmoType.Buckshot;
+	public override int AmmoAmount => 40;
+
+	public override Model WorldModel => Model.Load( "models/ammo/buckshot/dm_ammo_buckshot_large.vmdl" );
 }
 
 [Library( "dm_ammo357" )]
@@ -101,4 +112,26 @@ partial class AmmoCrossbow : BaseAmmo
 	public override int AmmoAmount => 5;
 
 	public override Model WorldModel => Model.Load( "models/dm_ammo_crossbow.vmdl" );
+}
+
+[Library( "dmc_ammorocket" )]
+[EditorModel( "models/ammo/rocket/dmc_rocketammo.vmdl" )]
+[Display( Name = "Ammo - Gives 5 Rockets" )]
+partial class AmmoRocket : BaseAmmo
+{
+	public override AmmoType AmmoType => AmmoType.Rocket;
+	public override int AmmoAmount => 5;
+
+	public override Model WorldModel => Model.Load( "models/ammo/rocket/dmc_rocketammo.vmdl" );
+}
+
+[Library( "dmc_ammorocketlarge" )]
+[EditorModel( "models/ammo/rocket/dmc_rocketammo_large.vmdl")]
+[Display( Name = "Ammo - Gives 10 Rockets" )]
+partial class AmmoRocketLarge : BaseAmmo
+{
+	public override AmmoType AmmoType => AmmoType.Rocket;
+	public override int AmmoAmount => 10;
+
+	public override Model WorldModel => Model.Load( "models/ammo/rocket/dmc_rocketammo_large.vmdl" );
 }

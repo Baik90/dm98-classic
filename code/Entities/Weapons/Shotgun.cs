@@ -1,20 +1,19 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-[Library( "dm_shotgun", Title = "Shotgun" )]
-[Hammer.EditorModel( "weapons/rust_pumpshotgun/rust_pumpshotgun.vmdl" )]
+[Library( "dmc_shotgun", Title = "Shotgun" )]
+[Hammer.EditorModel( "models/weapons/shotgun/w_shotgun.vmdl" )]
 [Display( Name = "Shotgun" )]
 partial class Shotgun : DeathmatchWeapon
 {
-	public static readonly Model WorldModel = Model.Load( "weapons/rust_pumpshotgun/rust_pumpshotgun.vmdl" );
-	public override string ViewModelPath => "weapons/rust_pumpshotgun/v_rust_pumpshotgun.vmdl";
+	public static readonly Model WorldModel = Model.Load( "models/weapons/shotgun/w_shotgun.vmdl" );
+	public override string ViewModelPath => "models/weapons/shotgun/v_shotgun.vmdl";
 	public override float PrimaryRate => 1;
 	public override float SecondaryRate => 1;
 	public override AmmoType AmmoType => AmmoType.Buckshot;
 	public override int ClipSize => 8;
 	public override float ReloadTime => 0.5f;
-	public override int Bucket => 2;
-	public override int BucketWeight => 200;
-
+	public override int Bucket => 1;
+	public override int BucketWeight => 100;
 	[Net, Predicted]
 	public bool StopReloading { get; set; }
 
@@ -63,12 +62,14 @@ partial class Shotgun : DeathmatchWeapon
 		//
 		// Shoot the bullets
 		//
-		ShootBullet( 0.2f, 0.3f, 20.0f, 2.0f, 4 );
+		ShootBullet( 0.2f, 0.3f, 20.0f, 2.0f, 6 );
 	}
 
 	public override void AttackSecondary()
 	{
-		TimeSincePrimaryAttack = -0.5f;
+		// Dont need Secondary Attack!
+
+		/*TimeSincePrimaryAttack = -0.5f;
 		TimeSinceSecondaryAttack = -0.5f;
 
 		if ( !TakeAmmo( 2 ) )
@@ -89,6 +90,7 @@ partial class Shotgun : DeathmatchWeapon
 		// Shoot the bullets
 		//
 		ShootBullet( 0.4f, 0.3f, 20.0f, 2.0f, 8 );
+		*/
 	}
 
 	[ClientRpc]
@@ -97,7 +99,7 @@ partial class Shotgun : DeathmatchWeapon
 		Host.AssertClient();
 
 		Particles.Create( "particles/pistol_muzzleflash.vpcf", EffectEntity, "muzzle" );
-		Particles.Create( "particles/pistol_ejectbrass.vpcf", EffectEntity, "ejection_point" );
+		Particles.Create( "particles/buckshot_eject.vpcf", EffectEntity, "ejection_point" );
 
 		ViewModelEntity?.SetAnimParameter( "fire", true );
 
@@ -165,7 +167,7 @@ partial class Shotgun : DeathmatchWeapon
 
 	public override void SimulateAnimator( PawnAnimator anim )
 	{
-		anim.SetAnimParameter( "holdtype", 2 ); // TODO this is shit
+		anim.SetAnimParameter( "holdtype", 3 ); // TODO this is shit
 		anim.SetAnimParameter( "aim_body_weight", 1.0f );
 	}
 }

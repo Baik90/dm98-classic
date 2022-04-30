@@ -69,6 +69,7 @@
 		ply.GiveAmmo( AmmoType.Crossbow, 1000 );
 		ply.GiveAmmo( AmmoType.Grenade, 1000 );
 		ply.GiveAmmo( AmmoType.Tripmine, 1000 );
+		ply.GiveAmmo( AmmoType.Rocket, 1000 );
 
 		ply.Inventory.Add( new Python() );
 		ply.Inventory.Add( new Shotgun() );

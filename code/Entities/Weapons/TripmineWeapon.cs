@@ -13,8 +13,8 @@ partial class TripmineWeapon : DeathmatchWeapon
 	public override float ReloadTime => 0.1f;
 	public override AmmoType AmmoType => AmmoType.Tripmine;
 	public override int ClipSize => 1;
-	public override int Bucket => 5;
-	public override int BucketWeight => 200;
+	public override int Bucket => 0;
+	public override int BucketWeight => 400;
 
 	public override void Spawn()
 	{
