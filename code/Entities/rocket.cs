@@ -2,13 +2,14 @@
 {
 	public static readonly Model WorldModel = Model.Load( "models/items/rocket/projectile_rocket.vmdl" );
 
-	bool Stuck;
 
 	public override void Spawn()
 	{
 		base.Spawn();
 
 		Model = WorldModel;
+		 
+
 	}
 
 
@@ -18,8 +19,6 @@
 		if ( !IsServer )
 			return;
 
-		if ( Stuck )
-			return;
 
 		float Speed = 500.0f;
 		var velocity = Rotation.Forward * Speed;
@@ -38,12 +37,12 @@
 
 		if ( tr.Hit )
 		{
+			DeathmatchGame.Explosion( this, Owner, Position, 400, 150, 1.0f );
+			Delete();
 			// TODO: CLINK NOISE (unless flesh)
 
 			// TODO: SPARKY PARTICLES (unless flesh)
 
-			Stuck = true;
-			Position = tr.EndPosition + Rotation.Forward * -1;
 
 			if ( tr.Entity.IsValid() )
 			{
@@ -55,19 +54,9 @@
 				tr.Entity.TakeDamage( damageInfo );
 			}
 
-			// TODO: Parent to bone so this will stick in the meaty heads
-			SetParent( tr.Entity, tr.Bone );
-			Owner = null;
 
-			//
-			// Surface impact effect
-			//
-			tr.Normal = Rotation.Forward * -1;
-			tr.Surface.DoBulletImpact( tr );
-			velocity = default;
 
-			// delete self in 60 seconds
-			_ = DeleteAsync( 60.0f );
+
 		}
 		else
 		{
