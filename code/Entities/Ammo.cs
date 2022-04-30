@@ -135,3 +135,15 @@ partial class AmmoRocketLarge : BaseAmmo
 
 	public override Model WorldModel => Model.Load( "models/ammo/rocket/dmc_rocketammo_large.vmdl" );
 }
+
+[Library( "dmc_nails" )]
+[EditorModel( "models/ammo/dm_placeholderammo.vmdl" )]
+[Display( Name = "Ammo - Gives 10 Rockets" )]
+partial class AmmoNailgun : BaseAmmo
+{
+	public override AmmoType AmmoType => AmmoType.Nail;
+	public override int AmmoAmount => 25;
+
+	public override Model WorldModel => Model.Load( "models/ammo/dm_placeholderammo.vmdl" );
+}
+

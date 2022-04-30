@@ -84,10 +84,10 @@
 			case AmmoType.RPG: return 5;
 			case AmmoType.Uranium: return 100;
 			case AmmoType.Grenade: return 10;
-			case AmmoType.Satchel: return 5;
 			case AmmoType.Tripmine: return 5;
 			case AmmoType.Snark: return 15;
 			case AmmoType.Rocket: return 100;
+			case AmmoType.Nail: return 100;
 		}
 
 		return 0;
@@ -102,10 +102,10 @@ public enum AmmoType
 	Crossbow,
 	Python,
 	Grenade,
-	Satchel,
 	Tripmine,
 	Snark,
 	RPG,
 	Uranium,
-	Rocket
+	Rocket,
+	Nail
 }
