@@ -146,3 +146,26 @@ partial class AmmoGrenadelarge : BaseAmmo
 
 	public override Model WorldModel => Model.Load( "models/ammo/grenade/dmc_grenadeammo_large.vmdl" );
 }
+
+[Library( "dmc_battery" )]
+[EditorModel( "models/items/battery/dmc_battery.vmdl" )]
+[Display( Name = "Ammo - Gives 6 cells" )]
+partial class AmmoBattery : BaseAmmo
+{
+	public override AmmoType AmmoType => AmmoType.Cell;
+	public override int AmmoAmount => 6;
+
+	public override Model WorldModel => Model.Load( "models/items/battery/dmc_battery.vmdl" );
+}
+
+
+[Library( "dmc_batterylarge" )]
+[EditorModel( "models/items/battery/dmc_batterylarge.vmdl" )]
+[Display( Name = "Ammo - Gives 12 cells" )]
+partial class AmmoBatteryLarge : BaseAmmo
+{
+	public override AmmoType AmmoType => AmmoType.Cell;
+	public override int AmmoAmount => 12;
+
+	public override Model WorldModel => Model.Load( "models/items/battery/dmc_batterylarge.vmdl" );
+}

@@ -81,7 +81,8 @@
 			case AmmoType.Buckshot: return 100;
 			case AmmoType.Grenade: return 100;
 			case AmmoType.Rocket: return 100;
-			case AmmoType.Nail: return 100;
+			case AmmoType.Nail: return 500;
+			case AmmoType.Cell: return 500;
 		}
 
 		return 0;
@@ -95,5 +96,6 @@ public enum AmmoType
 	Buckshot,
 	Grenade,
 	Rocket,
-	Nail
+	Nail,
+	Cell
 }
