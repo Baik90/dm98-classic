@@ -1,14 +1,14 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
 [Library( "dm_crowbar", Title = "Crowbar" )]
-[Hammer.EditorModel( "models/dm_crowbar.vmdl" )]
+[Hammer.EditorModel( "models/weapons/crowbar/w_crowbar.vmdl" )]
 [Display( Name = "Crowbar" )]
 partial class Crowbar : DeathmatchWeapon
 {
-	public static Model WorldModel = Model.Load( "models/dm_crowbar.vmdl" );
-	public override string ViewModelPath => "models/v_dm_crowbar.vmdl";
+	public static Model WorldModel = Model.Load( "models/weapons/crowbar/w_crowbar.vmdl" );
+	public override string ViewModelPath => "models/weapons/crowbar/v_crowbar.vmdl";
 
-	public override float PrimaryRate => 2.0f;
+	public override float PrimaryRate => 1.0f;
 	public override float SecondaryRate => 1.0f;
 	public override float ReloadTime => 3.0f;
 	public override AmmoType AmmoType => AmmoType.None;
