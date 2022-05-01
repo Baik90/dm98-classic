@@ -1,4 +1,4 @@
-﻿partial class Rocket : BasePhysics
+﻿partial class Rocket : ModelEntity
 {
 	public static readonly Model WorldModel = Model.Load( "models/items/rocket/projectile_rocket.vmdl" );
 
@@ -39,10 +39,6 @@
 		{
 			DeathmatchGame.Explosion( this, Owner, Position, 400, 150, 1.0f );
 			Delete();
-			// TODO: CLINK NOISE (unless flesh)
-
-			// TODO: SPARKY PARTICLES (unless flesh)
-
 
 			if ( tr.Entity.IsValid() )
 			{
