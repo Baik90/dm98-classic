@@ -1,16 +1,27 @@
-﻿partial class SMGGrenade : BasePhysics
+﻿partial class Grenade : BasePhysics
 {
-	public static readonly Model WorldModel = Model.Load( "models/dm_grenade.vmdl" );
+	public static readonly Model WorldModel = Model.Load( "models/items/grenade_projectile/projectile_grenade.vmdl" );
 
-	public SMGGrenade()
+	public override void Spawn()
 	{
+		base.Spawn();
+
 		Model = WorldModel;
-		SetupPhysicsFromModel( PhysicsMotionType.Dynamic );
+
+
 	}
 
 	[Event.Tick.Server]
-	public void Simulate()
+	public virtual void Simulate()
 	{
+		if ( !IsServer )
+			return;
+
+		var velocity = Rotation.Forward;
+
+		var start = Position;
+		var end = start + velocity * Time.Delta;
+
 		var trace = Trace.Ray( Position, Position )
 			.HitLayer( CollisionLayer.Water, true )
 			.Size( 24 )

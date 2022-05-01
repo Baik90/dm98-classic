@@ -83,7 +83,7 @@
 			case AmmoType.Crossbow: return 40;
 			case AmmoType.RPG: return 5;
 			case AmmoType.Uranium: return 100;
-			case AmmoType.Grenade: return 10;
+			case AmmoType.Grenade: return 100;
 			case AmmoType.Tripmine: return 5;
 			case AmmoType.Snark: return 15;
 			case AmmoType.Rocket: return 100;
