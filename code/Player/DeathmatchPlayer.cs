@@ -47,9 +47,9 @@
 
 		Inventory.DeleteContents();
 		Inventory.Add( new Crowbar() );
-		Inventory.Add( new Pistol(), true );
+		Inventory.Add( new Shotgun(), true );
 
-		GiveAmmo( AmmoType.Pistol, 25 );
+		GiveAmmo( AmmoType.Buckshot, 50 );
 
 		SupressPickupNotices = false;
 		Health = 100;
@@ -64,21 +64,13 @@
 		var ply = ConsoleSystem.Caller.Pawn as DeathmatchPlayer;
 
 		ply.GiveAmmo( AmmoType.Pistol, 1000 );
-		ply.GiveAmmo( AmmoType.Python, 1000 );
 		ply.GiveAmmo( AmmoType.Buckshot, 1000 );
-		ply.GiveAmmo( AmmoType.Crossbow, 1000 );
 		ply.GiveAmmo( AmmoType.Grenade, 1000 );
-		ply.GiveAmmo( AmmoType.Tripmine, 1000 );
 		ply.GiveAmmo( AmmoType.Rocket, 1000 );
 
-		ply.Inventory.Add( new Python() );
 		ply.Inventory.Add( new Rocketlauncher() );
 		ply.Inventory.Add( new Grenadelauncher() );
 		ply.Inventory.Add( new Shotgun() );
-		ply.Inventory.Add( new SMG() );
-		ply.Inventory.Add( new Crossbow() );
-		ply.Inventory.Add( new GrenadeWeapon() );
-		ply.Inventory.Add( new TripmineWeapon() );
 	}
 
 	public override void OnKilled()

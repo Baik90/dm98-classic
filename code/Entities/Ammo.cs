@@ -92,28 +92,6 @@ partial class AmmoBuckshotLarge : BaseAmmo
 	public override Model WorldModel => Model.Load( "models/ammo/buckshot/dm_ammo_buckshot_large.vmdl" );
 }
 
-[Library( "dm_ammo357" )]
-[EditorModel( "models/dm_ammo_357.vmdl" )]
-[Display( Name = "Ammo - 357" )]
-partial class Ammo357 : BaseAmmo
-{
-	public override AmmoType AmmoType => AmmoType.Python;
-	public override int AmmoAmount => 6;
-
-	public override Model WorldModel => Model.Load( "models/dm_ammo_357.vmdl" );
-}
-
-[Library( "dm_ammocrossbow" )]
-[EditorModel( "models/dm_ammo_crossbow.vmdl" )]
-[Display( Name = "Ammo - Crossbow" )]
-partial class AmmoCrossbow : BaseAmmo
-{
-	public override AmmoType AmmoType => AmmoType.Crossbow;
-	public override int AmmoAmount => 5;
-
-	public override Model WorldModel => Model.Load( "models/dm_ammo_crossbow.vmdl" );
-}
-
 [Library( "dmc_ammorocket" )]
 [EditorModel( "models/ammo/rocket/dmc_rocketammo.vmdl" )]
 [Display( Name = "Ammo - Gives 5 Rockets" )]

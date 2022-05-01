@@ -45,9 +45,7 @@ public class Ammo : Panel
 		AmmoBar.DeleteChildren( true );
 		BulletPanels.Clear();
 
-		AmmoBar.SetClass( "is-crossbow", weapon is Crossbow );
 		AmmoBar.SetClass( "is-shotgun", weapon is Shotgun );
-		AmmoBar.SetClass( "is-smg", weapon is SMG );
 
 		for ( int i = 0; i < weapon.ClipSize; i++ )
 		{
