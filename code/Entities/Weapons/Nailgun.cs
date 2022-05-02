@@ -9,8 +9,9 @@ partial class Nailgun : DeathmatchWeapon
 	public static readonly Model WorldModel = Model.Load( "weapons/rust_smg/rust_smg.vmdl" );
 	public override string ViewModelPath => "weapons/rust_smg/v_rust_smg.vmdl";
 
-	public override float PrimaryRate => 8;
+	public override float PrimaryRate => 5;
 	public override int Bucket => 3;
+	public override int BucketWeight => 100;
 	public override AmmoType AmmoType => AmmoType.Nail;
 	public override int ClipSize => 100;
 

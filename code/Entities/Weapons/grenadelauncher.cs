@@ -10,6 +10,7 @@ partial class Grenadelauncher : DeathmatchWeapon
 
 	public override float PrimaryRate => 1;
 	public override int Bucket => 5;
+	public override int BucketWeight => 100;
 	public override AmmoType AmmoType => AmmoType.Grenade;
 	public override int ClipSize => 5;
 
