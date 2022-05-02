@@ -20,7 +20,7 @@
 			return;
 
 
-		float Speed = 500.0f;
+		float Speed = 750.0f;
 		var velocity = Rotation.Forward * Speed;
 
 		var start = Position;
@@ -42,7 +42,7 @@
 
 			if ( tr.Entity.IsValid() )
 			{
-				var damageInfo = DamageInfo.FromBullet( tr.EndPosition, tr.Direction * 200, 20 )
+				var damageInfo = DamageInfo.FromBullet( tr.EndPosition, tr.Direction * 200, 250 )
 													.UsingTraceResult( tr )
 													.WithAttacker( Owner )
 													.WithWeapon( this );
