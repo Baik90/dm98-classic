@@ -13,7 +13,7 @@ public class InventoryBar : Panel
 
 	public InventoryBar()
 	{
-		for ( int i = 0; i < 6; i++ )
+		for ( int i = 0; i < 9; i++ )
 		{
 			var icon = new InventoryColumn( i, this );
 			columns.Add( icon );
@@ -59,6 +59,9 @@ public class InventoryBar : Panel
 		wantOpen = wantOpen || input.Pressed( InputButton.Slot4 );
 		wantOpen = wantOpen || input.Pressed( InputButton.Slot5 );
 		wantOpen = wantOpen || input.Pressed( InputButton.Slot6 );
+		wantOpen = wantOpen || input.Pressed( InputButton.Slot7 );
+		wantOpen = wantOpen || input.Pressed( InputButton.Slot8 );
+		wantOpen = wantOpen || input.Pressed( InputButton.Slot9 );
 
 		if ( Weapons.Count == 0 )
 		{
@@ -124,6 +127,9 @@ public class InventoryBar : Panel
 		if ( input.Pressed( InputButton.Slot4 ) ) columninput = 3;
 		if ( input.Pressed( InputButton.Slot5 ) ) columninput = 4;
 		if ( input.Pressed( InputButton.Slot6 ) ) columninput = 5;
+		if ( input.Pressed( InputButton.Slot7 ) ) columninput = 6;
+		if ( input.Pressed( InputButton.Slot8 ) ) columninput = 7;
+		if ( input.Pressed( InputButton.Slot9 ) ) columninput = 8;
 
 		if ( columninput == -1 ) return SelectedIndex;
 

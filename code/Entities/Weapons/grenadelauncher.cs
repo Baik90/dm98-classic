@@ -9,8 +9,7 @@ partial class Grenadelauncher : DeathmatchWeapon
 	public override string ViewModelPath => "models/weapons/rocketlauncher/v_rocketlauncher.vmdl";
 
 	public override float PrimaryRate => 1;
-	public override int Bucket => 1;
-	public override int BucketWeight => 200;
+	public override int Bucket => 5;
 	public override AmmoType AmmoType => AmmoType.Grenade;
 	public override int ClipSize => 5;
 

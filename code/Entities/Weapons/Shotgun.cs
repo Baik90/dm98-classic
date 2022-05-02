@@ -13,7 +13,6 @@ partial class Shotgun : DeathmatchWeapon
 	public override int ClipSize => 8;
 	public override float ReloadTime => 0.5f;
 	public override int Bucket => 1;
-	public override int BucketWeight => 100;
 	[Net, Predicted]
 	public bool StopReloading { get; set; }
 

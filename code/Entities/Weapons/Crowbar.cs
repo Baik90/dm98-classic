@@ -14,6 +14,7 @@ partial class Crowbar : DeathmatchWeapon
 	public override AmmoType AmmoType => AmmoType.None;
 	public override int ClipSize => 0;
 	public override int Bucket => 0;
+	public override int BucketWeight => 0;
 
 	public override void Spawn()
 	{
