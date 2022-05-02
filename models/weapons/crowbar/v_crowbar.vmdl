@@ -70,8 +70,8 @@
 					{
 						_class = "Bone"
 						name = "hold_r"
-						origin = [ 0.0, -1.034187, 11.668513 ]
-						angles = [ 0.0, 0.0, 0.0 ]
+						origin = [ 0.0, 0.0, -2.082832 ]
+						angles = [ 0.0, 180.0, 0.0 ]
 						do_not_discard = true
 					},
 				]
@@ -90,10 +90,38 @@
 				]
 				bone_cull_type = "None"
 			},
+			{
+				_class = "AnimationList"
+				children = 
+				[
+					{
+						_class = "AnimFile"
+						name = "attack"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/weapons/crowbar/anims/attack.dmx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 0
+						reverse = true
+					},
+				]
+				default_root_bone_name = ""
+			},
 		]
 		model_archetype = ""
 		primary_associated_entity = ""
-		anim_graph_name = ""
+		anim_graph_name = "dm98classic/animgraphs/v_crowbar.vanmgrph"
 		base_model_name = ""
 	}
 }
