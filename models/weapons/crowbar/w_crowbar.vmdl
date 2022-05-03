@@ -55,7 +55,7 @@
 						[
 							{
 								from = "crowbar.vmat"
-								to = "dev/helper/testgrid.vmat"
+								to = "materials/weapons/crowbar/crowbar.vmat"
 							},
 						]
 						use_global_default = false
