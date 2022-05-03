@@ -89,8 +89,8 @@
 					{
 						_class = "Bone"
 						name = "hold_r"
-						origin = [ -3.024628, -0.27285, 0.0 ]
-						angles = [ 0.0, 180.0, 0.0 ]
+						origin = [ 2.377026, 2.207416, 4.072078 ]
+						angles = [ -0.0, 29.846794, 0.0 ]
 						do_not_discard = true
 					},
 				]
