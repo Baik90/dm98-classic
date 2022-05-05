@@ -1,15 +1,19 @@
-﻿partial class Rocket : ModelEntity
+﻿[Library( "dmc_rocket", Title = "Rocket" )]
+partial class Rocket : BasePhysics
 {
 	public static readonly Model WorldModel = Model.Load( "models/items/rocket/projectile_rocket.vmdl" );
-
+	
+	Particles RocketParticles;
 
 	public override void Spawn()
 	{
 		base.Spawn();
 
 		Model = WorldModel;
-		 
+		SetupPhysicsFromModel( PhysicsMotionType.Static );
 
+		RocketParticles = Particles.Create( "particles/rocket_trail.vpcf", this, "trail_particle", true );
+		RocketParticles.SetPosition( 0, Position );
 	}
 
 
@@ -20,7 +24,7 @@
 			return;
 
 
-		float Speed = 750.0f;
+		float Speed = 100.0f;
 		var velocity = Rotation.Forward * Speed;
 
 		var start = Position;

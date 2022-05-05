@@ -25,73 +25,60 @@ partial class Grenadelauncher : DeathmatchWeapon
 		Model = WorldModel;
 	}
 
+	public override bool CanPrimaryAttack()
+	{
+		return Input.Released( InputButton.Attack1 );
+	}
+
 	public override void AttackPrimary()
 	{
+		TimeSincePrimaryAttack = 0;
+		TimeSinceSecondaryAttack = 0;
+
+		if ( Owner is not DeathmatchPlayer player ) return;
+
 		if ( !TakeAmmo( 1 ) )
 		{
-			DryFire();
-
-			if ( AvailableAmmo() > 0 )
-			{
-				Reload();
-			}
+			Reload();
 			return;
 		}
 
-		ShootEffects();
-		PlaySound( "rust_crossbow.shoot" );
+		// woosh sound
+		// screen shake
 
-		// TODO - if zoomed in then instant hit, no travel, 120 damage
+		PlaySound( "dm.grenade_throw" );
+
+		Rand.SetSeed( Time.Tick );
 
 
 		if ( IsServer )
+			using ( Prediction.Off() )
+			{
+				var grenade = new Grenade
+				{
+					Position = Owner.EyePosition + Owner.EyeRotation.Forward * 3.0f,
+					Owner = Owner
+				};
+
+				grenade.PhysicsBody.Velocity = Owner.EyeRotation.Forward * 600.0f + Owner.EyeRotation.Up * 200.0f + Owner.Velocity;
+
+				// This is fucked in the head, lets sort this this year
+				grenade.CollisionGroup = CollisionGroup.Debris;
+				grenade.SetInteractsExclude( CollisionLayer.Player );
+				grenade.SetInteractsAs( CollisionLayer.Debris );
+
+				_ = grenade.BlowIn( 3.0f );
+			}
+
+		player.SetAnimParameter( "b_attack", true );
+
+		Reload();
+
+		if ( IsServer && AmmoClip == 0 && player.AmmoCount( AmmoType.Grenade ) == 0 )
 		{
-			var bolt = new Grenade();
-			bolt.Position = Owner.EyePosition;
-			bolt.Rotation = Owner.EyeRotation;
-			bolt.Owner = Owner;
-			bolt.Velocity = Owner.EyeRotation.Forward * 1;
+			Delete();
+			player.SwitchToBestWeapon();
 		}
-	}
-
-	public override void Simulate( Client cl )
-	{
-		base.Simulate( cl );
-
-		Zoomed = Input.Down( InputButton.Attack2 );
-	}
-
-	public override void PostCameraSetup( ref CameraSetup camSetup )
-	{
-		base.PostCameraSetup( ref camSetup );
-
-		if ( Zoomed )
-		{
-			camSetup.FieldOfView = 20;
-			camSetup.ViewModel.FieldOfView = 40;
-		}
-	}
-
-	public override void BuildInput( InputBuilder owner )
-	{
-		if ( Zoomed )
-		{
-			owner.ViewAngles = Angles.Lerp( owner.OriginalViewAngles, owner.ViewAngles, 0.2f );
-		}
-	}
-
-	[ClientRpc]
-	protected override void ShootEffects()
-	{
-		Host.AssertClient();
-
-		if ( Owner == Local.Pawn )
-		{
-			new Sandbox.ScreenShake.Perlin( 0.5f, 4.0f, 1.0f, 0.5f );
-		}
-
-		ViewModelEntity?.SetAnimParameter( "fire", true );
-		CrosshairPanel?.CreateEvent( "fire" );
 	}
 	public override void SimulateAnimator( PawnAnimator anim )
 	{
