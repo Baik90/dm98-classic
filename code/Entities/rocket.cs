@@ -24,7 +24,7 @@ partial class Rocket : BasePhysics
 			return;
 
 
-		float Speed = 100.0f;
+		float Speed = 700.0f;
 		var velocity = Rotation.Forward * Speed;
 
 		var start = Position;

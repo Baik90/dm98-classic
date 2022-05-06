@@ -1,5 +1,5 @@
 ﻿[Library( "dmc_grenade", Title = "Grenade" )]
-partial class Grenade : BasePhysics
+partial class Grenade : ModelEntity
 {
 	public static readonly Model WorldModel = Model.Load( "models/items/grenade_projectile/projectile_grenade.vmdl" );
 
@@ -12,7 +12,7 @@ partial class Grenade : BasePhysics
 		Model = WorldModel;
 		SetupPhysicsFromModel( PhysicsMotionType.Dynamic );
 
-		GrenadeParticles = Particles.Create( "particles/rocket_trail.vpcf", this, "trail_particle", true );
+		GrenadeParticles = Particles.Create( "particles/grenade_trail.vpcf", this, "trail_particle", true );
 		GrenadeParticles.SetPosition( 0, Position );
 	}
 
