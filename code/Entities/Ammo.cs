@@ -48,7 +48,7 @@ partial class BaseAmmo : ModelEntity, IRespawnableEntity
 
 [Library( "dm_ammo9mmclip" )]
 [EditorModel( "models/dm_ammo_9mmclip.vmdl" )]
-[Display( Name = "Ammo - 9mm Clip" )]
+[Display( Name = "Ammo - 9mm Clip" ), Icon( "place" )]
 partial class Ammo9mmClip : BaseAmmo
 {
 	public override AmmoType AmmoType => AmmoType.Pistol;
@@ -114,7 +114,7 @@ partial class AmmoRocketLarge : BaseAmmo
 	public override Model WorldModel => Model.Load( "models/ammo/rocket/dmc_rocketammo_large.vmdl" );
 }
 
-[Library( "dmc_nails" )]
+[Library( "dmc_ammonails" )]
 [EditorModel( "models/ammo/dm_placeholderammo.vmdl" )]
 [Display( Name = "Ammo - Gives 25 Nails" )]
 partial class AmmoNailgun : BaseAmmo
@@ -125,7 +125,18 @@ partial class AmmoNailgun : BaseAmmo
 	public override Model WorldModel => Model.Load( "models/ammo/dm_placeholderammo.vmdl" );
 }
 
-[Library( "dmc_grenade" )]
+[Library( "dmc_ammonailslarge" )]
+[EditorModel( "models/ammo/dm_placeholderammo.vmdl" )]
+[Display( Name = "Ammo - Gives 25 Nails" )]
+partial class AmmoNailgunLarge : BaseAmmo
+{
+	public override AmmoType AmmoType => AmmoType.Nail;
+	public override int AmmoAmount => 25;
+
+	public override Model WorldModel => Model.Load( "models/ammo/dm_placeholderammo.vmdl" );
+}
+
+[Library( "dmc_ammogrenade" )]
 [EditorModel( "models/ammo/grenade/dmc_grenadeammo.vmdl" )]
 [Display( Name = "Ammo - Gives 10 Grenades" )]
 partial class AmmoGrenade : BaseAmmo
@@ -136,7 +147,7 @@ partial class AmmoGrenade : BaseAmmo
 		public override Model WorldModel => Model.Load( "models/ammo/grenade/dmc_grenadeammo.vmdl" );
 	}
 
-[Library( "dmc_grenadelarge" )]
+[Library( "dmc_ammogrenadelarge" )]
 [EditorModel( "models/ammo/grenade/dmc_grenadeammo_large.vmdl" )]
 [Display( Name = "Ammo - Gives 25 Grenades" )]
 partial class AmmoGrenadelarge : BaseAmmo
@@ -147,7 +158,7 @@ partial class AmmoGrenadelarge : BaseAmmo
 	public override Model WorldModel => Model.Load( "models/ammo/grenade/dmc_grenadeammo_large.vmdl" );
 }
 
-[Library( "dmc_battery" )]
+[Library( "dmc_ammobattery" )]
 [EditorModel( "models/items/battery/dmc_battery.vmdl" )]
 [Display( Name = "Ammo - Gives 6 cells" )]
 partial class AmmoBattery : BaseAmmo
@@ -159,7 +170,7 @@ partial class AmmoBattery : BaseAmmo
 }
 
 
-[Library( "dmc_batterylarge" )]
+[Library( "dmc_ammobatterylarge" )]
 [EditorModel( "models/items/battery/dmc_batterylarge.vmdl" )]
 [Display( Name = "Ammo - Gives 12 cells" )]
 partial class AmmoBatteryLarge : BaseAmmo
