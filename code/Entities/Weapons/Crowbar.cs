@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-[Library( "dm_crowbar", Title = "Crowbar" )]
+[Library( "dmc_crowbar", Title = "Crowbar" )]
 [Hammer.EditorModel( "models/weapons/crowbar/w_crowbar.vmdl" )]
 [Display( Name = "Crowbar" ), Category( "Weapon" ), Icon( "colorize" )]
 partial class Crowbar : DeathmatchWeapon
