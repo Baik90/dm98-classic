@@ -10,3 +10,4 @@ Properties/launchSettings.json
 *.csproj
 .vs
 *.sln
+*.generated.vtex_c
