@@ -1,8 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿
+using Hammer;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 [Library( "dmc_shotgun", Title = "Shotgun" )]
 [Hammer.EditorModel( "models/weapons/shotgun/w_shotgun.vmdl" )]
-[Display( Name = "Shotgun" )]
+[Display( Name = "Shotgun"), Category( "Weapon" ), Icon( "colorize" )]
 partial class Shotgun : DeathmatchWeapon
 {
 	public static readonly Model WorldModel = Model.Load( "models/weapons/shotgun/w_shotgun.vmdl" );

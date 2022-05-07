@@ -1,8 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 [Library( "dmc_grenadelauncher", Title = "Grenadelauncher" )]
 [Hammer.EditorModel( "models/weapons/rocketlauncher/w_rocketlauncher.vmdl" )]
-[Display( Name = "Grenadelauncher" )]
+[Display( Name = "Grenadelauncher"), Category( "Weapon" ), Icon( "colorize" )]
 partial class Grenadelauncher : DeathmatchWeapon
 {
 	public static readonly Model WorldModel = Model.Load( "models/weapons/rocketlauncher/w_rocketlauncher.vmdl" );
