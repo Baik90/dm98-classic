@@ -14,7 +14,7 @@ partial class Nailgun : DeathmatchWeapon
 	public override int Bucket => 3;
 	public override int BucketWeight => 100;
 	public override AmmoType AmmoType => AmmoType.Nail;
-	public override int ClipSize => 100;
+	public override int ClipSize => 50;
 
 	[Net, Predicted]
 	public bool Zoomed { get; set; }
