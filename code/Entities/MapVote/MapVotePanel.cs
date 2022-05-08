@@ -26,7 +26,7 @@ class MapVotePanel : Panel
 			Take = 16,
 		};
 
-		query.Tags.Add( "game:facepunch.dm98" ); // maybe this should be a "for this game" type of thing instead
+		query.Tags.Add( "game:baik.dm98classic" ); // maybe this should be a "for this game" type of thing instead
 
 		var packages = await query.RunAsync( default );
 
