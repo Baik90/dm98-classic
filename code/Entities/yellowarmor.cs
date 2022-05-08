@@ -39,7 +39,7 @@ partial class ArmorYellow : ModelEntity, IRespawnableEntity
 		player.Armour = newhealth;
 
 		Sound.FromWorld( "dm.item_battery", Position );
-		PickupFeed.OnPickup( To.Single( player ), $"+150 Armour" );
+		PickupFeed.OnPickup( To.Single( player ), $"Yellow Armor" );
 
 		ItemRespawn.Taken( this );
 		Delete();
