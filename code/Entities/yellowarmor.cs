@@ -30,11 +30,11 @@ partial class ArmorYellow : ModelEntity, IRespawnableEntity
 		base.StartTouch( other );
 
 		if ( other is not DeathmatchPlayer player ) return;
-		if ( player.Armour >= 100 ) return;
+		if ( player.Armour >= 150 ) return;
 
 		var newhealth = player.Armour + 150;
 
-		newhealth = newhealth.Clamp( 0, 100 );
+		newhealth = newhealth.Clamp( 0, 150 );
 
 		player.Armour = newhealth;
 
