@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 partial class Grenadelauncher : DeathmatchWeapon
 {
 	public static readonly Model WorldModel = Model.Load( "models/weapons/rocketlauncher/w_rocketlauncher.vmdl" );
-	public override string ViewModelPath => "models/weapons/rocketlauncher/v_rocketlauncher.vmdl";
+	public override string ViewModelPath => "models/weapons/grenadelauncher/v_grenadelauncher.vmdl";
 
 	public override float PrimaryRate => 1;
 	public override int Bucket => 5;

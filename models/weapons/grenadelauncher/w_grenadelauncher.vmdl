@@ -32,11 +32,26 @@
 						name = "launcher"
 						parent_bone = "root"
 						material_name = "dev/helper/testgrid.vmat"
-						origin = [ 10.07204, 0.508721, 0.310796 ]
+						origin = [ 10.072, 0.0, 0.310796 ]
 						angles = [ 0.0, 90.0, 90.0 ]
 						max_u = 1.0
 						max_v = 1.0
 						dimensions = [ 5.778389, 4.861183, 47.122032 ]
+						segments_x = 1
+						segments_y = 1
+						segments_z = 1
+						invert = false
+					},
+					{
+						_class = "RenderPrimitiveBox"
+						name = "launcher1"
+						parent_bone = "root"
+						material_name = "materials/dev/dev_measuregeneric01b.vmat"
+						origin = [ 32.146694, 0.0, 0.310794 ]
+						angles = [ 0.0, 90.0, 90.0 ]
+						max_u = 1.0
+						max_v = 1.0
+						dimensions = [ 8.0, 8.0, 3.808189 ]
 						segments_x = 1
 						segments_y = 1
 						segments_z = 1
