@@ -23,7 +23,7 @@ partial class Nail : ModelEntity
 		if ( Stuck )
 			return;
 
-		float Speed = 900.0f;
+		float Speed = 1000.0f;
 		var velocity = Rotation.Forward * Speed;
 
 		var start = Position;
