@@ -2,11 +2,11 @@
 using System.ComponentModel.DataAnnotations;
 
 [Library( "dmc_grenadelauncher", Title = "Grenadelauncher" )]
-[Hammer.EditorModel( "models/weapons/rocketlauncher/w_rocketlauncher.vmdl" )]
+[Hammer.EditorModel( "models/weapons/grenadelauncher/w_grenadelauncher.vmdl" )]
 [Display( Name = "Grenadelauncher"), Category( "Weapon" ), Icon( "colorize" )]
 partial class Grenadelauncher : DeathmatchWeapon
 {
-	public static readonly Model WorldModel = Model.Load( "models/weapons/rocketlauncher/w_rocketlauncher.vmdl" );
+	public static readonly Model WorldModel = Model.Load( "models/weapons/grenadelauncher/w_grenadelauncher.vmdl" );
 	public override string ViewModelPath => "models/weapons/grenadelauncher/v_grenadelauncher.vmdl";
 
 	public override float PrimaryRate => 1;
