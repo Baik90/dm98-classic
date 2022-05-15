@@ -104,11 +104,11 @@ partial class Shotgun : DeathmatchWeapon
 		Particles.Create( "particles/pistol_muzzleflash.vpcf", EffectEntity, "muzzle" );
 		Particles.Create( "particles/buckshot_eject.vpcf", EffectEntity, "ejection_point" );
 
-		ViewModelEntity?.SetAnimParameter( "fire", true );
+		ViewModelEntity?.SetAnimParameter( "attack", true );
 
 		if ( IsLocalPawn )
 		{
-			new Sandbox.ScreenShake.Perlin( 1.0f, 1.5f, 2.0f );
+			new Sandbox.ScreenShake.Perlin( 1.5f, 0.5f, 1.5f );
 		}
 
 		CrosshairPanel?.CreateEvent( "fire" );

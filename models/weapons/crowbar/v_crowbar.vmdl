@@ -96,7 +96,7 @@
 				[
 					{
 						_class = "AnimFile"
-						name = "crowbar_deploy"
+						name = "deploy"
 						activity_name = ""
 						activity_weight = 1
 						weight_list_name = ""
@@ -117,7 +117,7 @@
 					},
 					{
 						_class = "AnimFile"
-						name = "crowbar_attack"
+						name = "attack"
 						activity_name = ""
 						activity_weight = 1
 						weight_list_name = ""
@@ -142,7 +142,7 @@
 		]
 		model_archetype = ""
 		primary_associated_entity = ""
-		anim_graph_name = "dm98classic/animgraphs/v_crowbar.vanmgrph"
+		anim_graph_name = "animgraphs/v_crowbar.vanmgrph"
 		base_model_name = ""
 	}
 }
