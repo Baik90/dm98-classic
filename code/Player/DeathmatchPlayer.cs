@@ -65,12 +65,14 @@
 
 		ply.GiveAmmo( AmmoType.Pistol, 1000 );
 		ply.GiveAmmo( AmmoType.Buckshot, 1000 );
-		ply.GiveAmmo( AmmoType.Grenade, 1000 );
 		ply.GiveAmmo( AmmoType.Rocket, 1000 );
+		ply.GiveAmmo( AmmoType.Cell, 1000 );
+		ply.GiveAmmo( AmmoType.Nail, 1000 );
 
 		ply.Inventory.Add( new Rocketlauncher() );
 		ply.Inventory.Add( new Grenadelauncher() );
 		ply.Inventory.Add( new Shotgun() );
+		ply.Inventory.Add( new Nailgun() );
 	}
 
 	public override void OnKilled()

@@ -1,9 +1,22 @@
 ﻿[Library( "dmc_grenade", Title = "Grenade" )]
-partial class Grenade : ModelEntity
+[Hammer.Skip]
+partial class Grenade : BasePhysics
 {
 	public static readonly Model WorldModel = Model.Load( "models/items/grenade_projectile/projectile_grenade.vmdl" );
 
 	Particles GrenadeParticles;
+
+	/*public virtual void Tick()
+	{
+		var start = Position;
+		var end = start * Time.Delta;
+
+		var tr = Trace.Ray( start, end )
+		.UseHitboxes();
+	}*/
+
+
+
 
 	public override void Spawn()
 	{
@@ -16,6 +29,7 @@ partial class Grenade : ModelEntity
 		GrenadeParticles.SetPosition( 0, Position );
 	}
 
+		
 	public async Task BlowIn( float seconds )
 	{
 		await Task.DelaySeconds( seconds );

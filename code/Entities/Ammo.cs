@@ -141,27 +141,6 @@ partial class AmmoNailgunLarge : BaseAmmo
 	public override Model WorldModel => Model.Load( "models/ammo/dm_placeholderammo.vmdl" );
 }
 
-[Library( "dmc_ammogrenade" )]
-[EditorModel( "models/ammo/grenade/dmc_grenadeammo.vmdl" )]
-[Display( Name = "Ammo - 10 Grenades"), Category( "Ammo" ), Icon( "hdr_auto" )]
-partial class AmmoGrenade : BaseAmmo
-	{
-		public override AmmoType AmmoType => AmmoType.Grenade;
-		public override int AmmoAmount => 10;
-
-		public override Model WorldModel => Model.Load( "models/ammo/grenade/dmc_grenadeammo.vmdl" );
-	}
-
-[Library( "dmc_ammogrenadelarge" )]
-[EditorModel( "models/ammo/grenade/dmc_grenadeammo_large.vmdl" )]
-[Display( Name = "Ammo - 25 Grenades"), Category( "Ammo" ), Icon( "hdr_auto" )]
-partial class AmmoGrenadelarge : BaseAmmo
-{
-	public override AmmoType AmmoType => AmmoType.Grenade;
-	public override int AmmoAmount => 25;
-
-	public override Model WorldModel => Model.Load( "models/ammo/grenade/dmc_grenadeammo_large.vmdl" );
-}
 
 [Library( "dmc_ammobattery" )]
 [EditorModel( "models/items/battery/dmc_battery.vmdl" )]

@@ -12,7 +12,7 @@ partial class Grenadelauncher : DeathmatchWeapon
 	public override float PrimaryRate => 1;
 	public override int Bucket => 5;
 	public override int BucketWeight => 100;
-	public override AmmoType AmmoType => AmmoType.Grenade;
+	public override AmmoType AmmoType => AmmoType.Rocket;
 	public override int ClipSize => 5;
 
 	[Net, Predicted]
@@ -75,7 +75,7 @@ partial class Grenadelauncher : DeathmatchWeapon
 
 		Reload();
 
-		if ( IsServer && AmmoClip == 0 && player.AmmoCount( AmmoType.Grenade ) == 0 )
+		if ( IsServer && AmmoClip == 0 && player.AmmoCount( AmmoType.Rocket ) == 0 )
 		{
 			Delete();
 			player.SwitchToBestWeapon();
