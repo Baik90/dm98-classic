@@ -96,7 +96,7 @@
 					},
 					{
 						_class = "AnimFile"
-						name = "fire"
+						name = "attack"
 						activity_name = ""
 						activity_weight = 1
 						weight_list_name = ""
@@ -121,7 +121,7 @@
 		]
 		model_archetype = ""
 		primary_associated_entity = ""
-		anim_graph_name = ""
+		anim_graph_name = "animgraphs/v_shotgun.vanmgrph"
 		base_model_name = ""
 	}
 }
