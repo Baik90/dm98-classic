@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using Hammer;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 [Library( "dmc_grenadelauncher", Title = "Grenadelauncher" )]
@@ -45,7 +46,6 @@ partial class Grenadelauncher : DeathmatchWeapon
 		}
 
 		// woosh sound
-		// screen shake
 
 		PlaySound( "dm.grenade_throw" );
 
@@ -58,15 +58,16 @@ partial class Grenadelauncher : DeathmatchWeapon
 				var grenade = new Grenade
 				{
 					Position = Owner.EyePosition + Owner.EyeRotation.Forward * 3.0f,
-					Owner = Owner
+					Owner = Owner,
+					Rotation = Owner.EyeRotation
 				};
 
 				grenade.PhysicsBody.Velocity = Owner.EyeRotation.Forward * 600.0f + Owner.EyeRotation.Up * 200.0f + Owner.Velocity;
 
 				// This is fucked in the head, lets sort this this year
 				grenade.CollisionGroup = CollisionGroup.Debris;
-				grenade.SetInteractsExclude( CollisionLayer.Player );
-				grenade.SetInteractsAs( CollisionLayer.Debris );
+				grenade.SetInteractsExclude( CollisionLayer.Water );
+				grenade.SetInteractsAs( CollisionLayer.PhysicsProp );
 
 				_ = grenade.BlowIn( 3.0f );
 			}

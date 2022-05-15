@@ -74,10 +74,10 @@
 						name = "grenade_projectile_phy"
 						parent_bone = ""
 						surface_prop = "grenade"
-						collision_group = ""
-						collision_interact_as = ""
-						collision_interact_with = ""
-						collision_interact_exclude = ""
+						collision_group = "debris"
+						collision_interact_as = "physics_prop"
+						collision_interact_with = "player"
+						collision_interact_exclude = "water"
 						recenter_on_parent_bone = false
 						offset_origin = [ 0.0, 0.0, 0.0 ]
 						offset_angles = [ 90.0, 0.0, 0.0 ]
@@ -153,6 +153,28 @@
 							parent_bodygroup_name = ""
 							parent_bodygroup_value = 0
 						}
+					},
+				]
+			},
+			{
+				_class = "HitboxSetList"
+				children = 
+				[
+					{
+						_class = "HitboxSet"
+						name = "hitbox"
+						children = 
+						[
+							{
+								_class = "Hitbox"
+								parent_bone = "root"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -1.0, -2.629149, -2.629825 ]
+								hitbox_maxs = [ 9.979081, 2.640622, 2.631884 ]
+							},
+						]
 					},
 				]
 			},
