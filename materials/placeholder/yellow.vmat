@@ -22,7 +22,7 @@ Layer0
 	g_flTintColor "[1.000000 1.000000 1.000000 0.000000]"
 	TextureAmbientOcclusion "materials/default/default_ao.tga"
 	TextureBlendMask "materials/default/default_blend.tga"
-	TextureColor "[0.274510 0.258824 0.070588 1.000000]"
+	TextureColor "[1.000000 0.913726 0.000000 1.000000]"
 	TextureMetalness "[0.000000 0.000000 0.000000 0.000000]"
 	TextureNormal "materials/default/default_normal.tga"
 	TextureRoughness "[1.000000 1.000000 1.000000 0.000000]"
