@@ -32,16 +32,31 @@
 				children = 
 				[
 					{
-						_class = "PhysicsShapeBox"
-						parent_bone = ""
+						_class = "PhysicsHullFile"
+						name = "crowbar_phy"
+						parent_bone = "hold_r"
 						surface_prop = "default"
 						collision_group = ""
 						collision_interact_as = ""
 						collision_interact_with = ""
 						collision_interact_exclude = ""
-						origin = [ 9.985984, 0.017577, -1.193499 ]
-						angles = [ 0.0, 0.0, 0.0 ]
-						dimensions = [ 47.827888, 2.714752, 9.498205 ]
+						recenter_on_parent_bone = false
+						offset_origin = [ 15.0, -10.0, -10.0 ]
+						offset_angles = [ 0.0, 0.0, 0.0 ]
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						filename = "models/weapons/crowbar/crowbar_phy.dmx"
+						import_scale = 1.0
+						faceMergeAngle = 10.0
+						maxHullVertices = 0
+						import_mode = "HullPerMesh"
+						optimization_algorithm = "QEM"
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
 					},
 				]
 			},
