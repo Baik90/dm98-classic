@@ -23,7 +23,7 @@ partial class Grenadelauncher : DeathmatchWeapon
 	{
 		base.Spawn();
 
-		AmmoClip = 50;
+		AmmoClip = 5;
 		Model = WorldModel;
 	}
 
@@ -51,13 +51,14 @@ partial class Grenadelauncher : DeathmatchWeapon
 			{
 				var grenade = new Grenade
 				{
-					Position = Owner.EyePosition + 2.5f + Owner.EyeRotation.Forward * 3.0f,
+					Position = Owner.EyePosition + Owner.EyeRotation.Forward * 20.0f,
 					Owner = Owner,
 					Rotation = Owner.EyeRotation
 				};
 
-				grenade.PhysicsBody.Velocity = Owner.EyeRotation.Forward * 600.0f + Owner.EyeRotation.Up * 200.0f + Owner.Velocity;	
-				
+				grenade.PhysicsBody.Velocity = Owner.EyeRotation.Forward * 600.0f + Owner.EyeRotation.Up * 200.0f + Owner.Velocity;
+				//need fix for getting hit by own grenade
+				//grenade.SetInteractsExclude( CollisionLayer.Player );
 				_ = grenade.BlowIn( 3.0f );
 			}
 	}
@@ -78,10 +79,16 @@ partial class Grenadelauncher : DeathmatchWeapon
 			owner.ViewAngles = Angles.Lerp( owner.OriginalViewAngles, owner.ViewAngles, 0.2f );
 		}
 	}
-
-	[ClientRpc]
-	protected override void ShootEffects()
+	public override void SimulateAnimator( PawnAnimator anim )
 	{
+		anim.SetAnimParameter( "holdtype", 3 ); // TODO this is shit
+		anim.SetAnimParameter( "aim_body_weight", 1.0f );
+	}
+	[ClientRpc]
+
+	protected override void ShootEffects() 
+	{
+
 		Host.AssertClient();
 
 		if ( Owner == Local.Pawn )
