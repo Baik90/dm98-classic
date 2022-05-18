@@ -13,7 +13,7 @@ public class InventoryBar : Panel
 
 	public InventoryBar()
 	{
-		for ( int i = 0; i < 9; i++ )
+		for ( int i = 0; i < 8; i++ )
 		{
 			var icon = new InventoryColumn( i, this );
 			columns.Add( icon );
@@ -104,7 +104,7 @@ public class InventoryBar : Panel
 
 		SelectedWeapon = sortedWeapons[SelectedIndex];
 
-		for ( int i = 0; i < 6; i++ )
+		for ( int i = 0; i < 8; i++ )
 		{
 			columns[i].TickSelection( SelectedWeapon );
 		}
