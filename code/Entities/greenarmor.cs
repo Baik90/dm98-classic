@@ -38,7 +38,7 @@ partial class ArmorGreen : ModelEntity, IRespawnableEntity
 
 		player.Armour = newhealth;
 
-		Sound.FromWorld( "dm.item_battery", Position );
+		Sound.FromWorld( "dmc.pickup_armor", Position );
 		PickupFeed.OnPickup( To.Single( player ), $"Green Armor" );
 
 		ItemRespawn.Taken( this );
