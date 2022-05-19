@@ -1,5 +1,4 @@
-﻿
-using Sandbox.UI;
+﻿using Sandbox.UI;
 
 [UseTemplate]
 class MapIcon : Panel

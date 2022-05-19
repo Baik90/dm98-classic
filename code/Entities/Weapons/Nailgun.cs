@@ -1,9 +1,8 @@
-﻿using Hammer;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 [Library( "dmc_nailgun", Title = "Nailgun" )]
-[EditorModel( "weapons/rust_smg/rust_smg.vmdl" )]
+[Hammer.EditorModel( "weapons/rust_smg/rust_smg.vmdl" )]
 [Display( Name = "Nailgun"), Category( "Weapon" ), Icon( "colorize" )]
 partial class Nailgun : DeathmatchWeapon
 {

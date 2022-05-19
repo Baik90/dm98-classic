@@ -1,7 +1,4 @@
-﻿
-
-
-partial class DeathmatchGame : Game
+﻿partial class DeathmatchGame : Game
 {
 	public static GameStates CurrentState => (Current as DeathmatchGame)?.GameState ?? GameStates.Warmup;
 
@@ -35,11 +32,11 @@ partial class DeathmatchGame : Game
 	private async Task GameLoopAsync()
 	{
 		GameState = GameStates.Warmup;
-		StateTimer = 10;
+		//StateTimer = 10;
 		await WaitStateTimer();
 
 		GameState = GameStates.Live;
-		StateTimer = 20 * 60;
+		StateTimer = 21 * 60;
 		FreshStart();
 		await WaitStateTimer();
 

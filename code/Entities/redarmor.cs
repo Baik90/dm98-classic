@@ -1,12 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using Hammer;
 using System.ComponentModel;
 
 /// <summary>
 /// Gives 200 Armor
 /// </summary>
 [Library( "dmc_redarmor", Title = "Red Armor" )]
-[EditorModel( "models/items/armor/armor_red.vmdl" )]
+[Hammer.EditorModel( "models/items/armor/armor_red.vmdl" )]
 [Display( Name = "Red Armor" ), Category( "Armor" ), Icon( "security" )]
 partial class ArmorRed : ModelEntity, IRespawnableEntity
 {

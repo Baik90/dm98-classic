@@ -1,6 +1,4 @@
-﻿
-using Hammer;
-using Sandbox;
+﻿using Hammer;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 

@@ -1,5 +1,4 @@
-﻿
-partial class MapVoteEntity : Entity
+﻿partial class MapVoteEntity : Entity
 {
 	static MapVoteEntity Current;
 	MapVotePanel Panel;

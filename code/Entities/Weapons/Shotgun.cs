@@ -1,6 +1,4 @@
-﻿
-using Hammer;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 [Library( "dmc_shotgun", Title = "Shotgun" )]

@@ -1,10 +1,8 @@
-﻿
-using Hammer;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 [Library( "dmc_healthkit_small", Title = "HealthKit Small" )]
-[EditorModel( "models/items/healthkit/healthkit_s.vmdl" )]
+[Hammer.EditorModel( "models/items/healthkit/healthkit_s.vmdl" )]
 [Display( Name = "Small Healthkit", GroupName = "Health", Description = "Gives 15 healthpoints." ), Category( "Health" ), Icon( "heart_broken" )]
 partial class HealthKitSmall : ModelEntity, IRespawnableEntity
 {
