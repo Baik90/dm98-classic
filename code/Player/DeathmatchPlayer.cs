@@ -24,8 +24,6 @@
 
 		Controller = new WalkController
 		{
-			WalkSpeed = 270,
-			SprintSpeed = 270,
 			DefaultSpeed = 270,
 			AirAcceleration = 10,
 
