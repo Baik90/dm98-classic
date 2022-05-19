@@ -51,7 +51,7 @@ partial class Grenadelauncher : DeathmatchWeapon
 			{
 				var grenade = new Grenade
 				{
-					Position = Owner.EyePosition + Owner.EyeRotation.Forward * 20.0f,
+					Position = Owner.EyePosition + Owner.EyeRotation.Forward * 30.0f,
 					Owner = Owner,
 					Rotation = Owner.EyeRotation
 				};

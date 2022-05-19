@@ -48,45 +48,44 @@ vitals
 }
 
 
-
-.dm_pistol .icon
+.dmc_crowbar .icon 
 {
-    background-image: url( /ui/weapons/dm_pistol.png );
+    background-image: url( /ui/weapons/dmc_crowbar.png );
 }
 
-.dmc_shotgun .icon
+.dmc_shotgun .icon 
 {
-    background-image: url( /ui/weapons/dm_shotgun.png );
+    background-image: url( /ui/weapons/dmc_shotgun.png );
 }
 
-.dm_smg .icon
+.dmc_supershotgun .icon 
 {
-    background-image: url( /ui/weapons/dm_smg.png );
+    background-image: url( /ui/weapons/dmc_supershotgun.png );
 }
 
-.dm_crossbow .icon, .crossbow_bolt .icon
+.dmc_nailgun .icon 
 {
-    background-image: url( /ui/weapons/dm_crossbow.png );
+    background-image: url( /ui/weapons/dmc_nailgun.png );
 }
 
-.dm_357 .icon
+.dmc_supernailgun .icon
 {
-    background-image: url( /ui/weapons/dm_357.png );
+    background-image: url( /ui/weapons/dmc_supernailgun.png );
 }
 
-.dm_crowbar .icon
+.dmc_grenadelauncher .icon
 {
-    background-image: url( /ui/weapons/dm_crowbar.png );
+    background-image: url( /ui/weapons/dmc_grenadelauncher.png );
 }
 
-.dm_grenade .icon, .dm_handgrenade .icon
+.dmc_rocketlauncher .icon
 {
-    background-image: url( /ui/weapons/dm_grenade.png );
+    background-image: url( /ui/weapons/dmc_rocketlauncher.png );
 }
 
-.dm_tripmine .icon, .dm_tripmine_planted .icon
+.dmc_lightninggun .icon
 {
-    background-image: url( /ui/weapons/dm_tripmine.png );
+    background-image: url( /ui/weapons/dmc_lightninggun.png );
 }
 
 .bottom-left
