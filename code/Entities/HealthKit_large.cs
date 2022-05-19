@@ -1,6 +1,9 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
+/// <summary>
+/// Gives 25 Healthpoints
+/// </summary>
 [Library( "dmc_healthkit_large", Title = "HealthKit Large" )]
 [Hammer.EditorModel( "models/items/healthkit/healthkit_m.vmdl" )]
 [Display( Name = "Large Healthkit", GroupName = "Health", Description = "Gives 25 healthpoints." ), Category( "Health" ), Icon( "heart_broken" )]

@@ -1,6 +1,10 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
+
+/// <summary>
+/// It Clues in the name
+/// </summary>
 [Library( "dmc_grenadelauncher", Title = "Grenadelauncher" )]
 [Hammer.EditorModel( "models/weapons/grenadelauncher/w_grenadelauncher.vmdl" )]
 [Display( Name = "Grenadelauncher"), Category( "Weapon" ), Icon( "colorize" )]

@@ -1,6 +1,9 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
+/// <summary>
+/// A Shotgun
+/// </summary>
 [Library( "dmc_shotgun", Title = "Shotgun" )]
 [Hammer.EditorModel( "models/weapons/shotgun/w_shotgun.vmdl" )]
 [Display( Name = "Shotgun"), Category( "Weapon" ), Icon( "colorize" )]

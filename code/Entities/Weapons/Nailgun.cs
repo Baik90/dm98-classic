@@ -1,6 +1,9 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
+/// <summary>
+/// Not a Tool
+/// </summary>
 [Library( "dmc_nailgun", Title = "Nailgun" )]
 [Hammer.EditorModel( "weapons/rust_smg/rust_smg.vmdl" )]
 [Display( Name = "Nailgun"), Category( "Weapon" ), Icon( "colorize" )]

@@ -1,6 +1,9 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
+/// <summary>
+/// A Crowbar
+/// </summary>
 [Library( "dmc_crowbar", Title = "Crowbar" )]
 [Hammer.EditorModel( "models/weapons/crowbar/w_crowbar.vmdl" )]
 [Display( Name = "Crowbar" ), Category( "Weapon" ), Icon( "colorize" )]

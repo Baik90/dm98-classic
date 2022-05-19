@@ -1,6 +1,9 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
+/// <summary>
+/// Shoots explosiv Rockets
+/// </summary>
 [Library( "dmc_rocketlauncher", Title = "Rocketlauncher" )]
 [Hammer.EditorModel( "models/weapons/rocketlauncher/w_rocketlauncher.vmdl" )]
 [Display( Name = "Rocketlauncher"), Category( "Weapon" ), Icon( "colorize" )]
