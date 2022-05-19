@@ -68,6 +68,10 @@ vitals
     background-image: url( /ui/weapons/dmc_nailgun.png );
 }
 
+.Nails .icon {
+    background-image: url( /ui/weapons/dmc_nailgun.png );
+}
+
 .dmc_supernailgun .icon
 {
     background-image: url( /ui/weapons/dmc_supernailgun.png );
@@ -78,7 +82,17 @@ vitals
     background-image: url( /ui/weapons/dmc_grenadelauncher.png );
 }
 
+.dmc_grenade .icon 
+{
+    background-image: url( /ui/weapons/dmc_grenadelauncher.png );
+}
+
 .dmc_rocketlauncher .icon
+{
+    background-image: url( /ui/weapons/dmc_rocketlauncher.png );
+}
+
+.dmc_rocket .icon 
 {
     background-image: url( /ui/weapons/dmc_rocketlauncher.png );
 }
