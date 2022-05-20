@@ -1,5 +1,7 @@
-﻿[Library( "dmc_rocket", Title = "Rocket" )]
-[Hammer.Skip]
+﻿
+using SandboxEditor;
+[Library( "dmc_rocket", Title = "Rocket" )]
+[HideInEditor]
 partial class Rocket : BasePhysics
 {
 	public static readonly Model WorldModel = Model.Load( "models/items/rocket/projectile_rocket.vmdl" );

@@ -1,12 +1,10 @@
 ﻿using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
-
 /// <summary>
 /// Gives 25 Healthpoints
 /// </summary>
 [Library( "dmc_healthkit_large", Title = "HealthKit Large" )]
-[Hammer.EditorModel( "models/items/healthkit/healthkit_m.vmdl" )]
-[Display( Name = "Large Healthkit", GroupName = "Health", Description = "Gives 25 healthpoints." ), Category( "Health" ), Icon( "heart_broken" )]
+[EditorModel( "models/items/healthkit/healthkit_m.vmdl" )]
+[Title("Large Healthkit"), Category( "Health" ), Icon( "heart_broken" )]
 partial class HealthKitLarge : ModelEntity, IRespawnableEntity
 {
 	public static readonly Model WorldModel = Model.Load( "models/items/healthkit/healthkit_m.vmdl" );

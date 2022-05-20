@@ -1,4 +1,5 @@
-﻿partial class DeathmatchGame : Game
+﻿using SandboxEditor;
+partial class DeathmatchGame : Game
 {
 	public static GameStates CurrentState => (Current as DeathmatchGame)?.GameState ?? GameStates.Warmup;
 
@@ -10,7 +11,7 @@
 	[Net]
 	public string NextMap { get; set; } = "facepunch.datacore";
 
-	[AdminCmd]
+	[ConCmd.Admin]
 	public static void SkipStage()
 	{
 		if ( Current is not DeathmatchGame dmg ) return;

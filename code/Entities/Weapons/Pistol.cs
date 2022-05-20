@@ -1,10 +1,7 @@
-﻿using Hammer;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
-
+﻿using System.ComponentModel;
 [Library( "dm_pistol", Title = "Pistol" )]
-[Hammer.EditorModel( "weapons/rust_pistol/rust_pistol.vmdl" )]
-[Display( Name = "Pistol REMOVE" ), Category( "Weapon" ), Icon( "colorize" )]
+[EditorModel( "weapons/rust_pistol/rust_pistol.vmdl" )]
+[Title("Pistol REMOVE" ), Category( "Weapon" ), Icon( "colorize" )]
 partial class Pistol : DeathmatchWeapon
 {
 	public static readonly Model WorldModel = Model.Load( "weapons/rust_pistol/rust_pistol.vmdl" );
@@ -26,7 +23,7 @@ partial class Pistol : DeathmatchWeapon
 
 	public override bool CanPrimaryAttack()
 	{
-		return base.CanPrimaryAttack() && Input.Pressed( InputButton.Attack1 );
+		return base.CanPrimaryAttack() && Input.Pressed( InputButton.PrimaryAttack );
 	}
 
 	public override void AttackPrimary()

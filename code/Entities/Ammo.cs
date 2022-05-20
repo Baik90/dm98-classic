@@ -1,7 +1,4 @@
-﻿using Hammer;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
-
+﻿using System.ComponentModel;
 partial class BaseAmmo : ModelEntity, IRespawnableEntity
 {
 	//public static Model WorldModel = Model.Load( "models/dm_battery.vmdl" );
@@ -52,7 +49,7 @@ partial class BaseAmmo : ModelEntity, IRespawnableEntity
 /// </summary>
 [Library( "dm_ammo9mmclip" )]
 [EditorModel( "models/dm_ammo_9mmclip.vmdl" )]
-[Display( Name = "Ammo - 17 9mm" )]
+[Title( "Ammo - 17 9mm" )]
 partial class Ammo9mmClip : BaseAmmo
 {
 	public override AmmoType AmmoType => AmmoType.Pistol;
@@ -67,7 +64,7 @@ partial class Ammo9mmClip : BaseAmmo
 /// </summary>
 [Library( "dm_ammo9mmbox" )]
 [EditorModel( "models/dm_ammo_9mmbox.vmdl" )]
-[Display( Name = "Ammo - 9mm Box" )]
+[Title("Ammo - 9mm Box" )]
 partial class Ammo9mmBox : BaseAmmo
 {
 	public override AmmoType AmmoType => AmmoType.Pistol;
@@ -82,7 +79,7 @@ partial class Ammo9mmBox : BaseAmmo
 /// </summary>
 [Library( "dm_ammobuckshot" )]
 [EditorModel( "models/ammo/buckshot/dm_ammo_buckshot.vmdl" )]
-[Display( Name = "Ammo - Buckshot"), Category( "Ammo" ), Icon( "hdr_auto" )]
+[Title("Ammo - Buckshot"), Category( "Ammo" ), Icon( "hdr_auto" )]
 partial class AmmoBuckshot : BaseAmmo
 {
 	public override AmmoType AmmoType => AmmoType.Buckshot;
@@ -97,7 +94,7 @@ partial class AmmoBuckshot : BaseAmmo
 /// </summary>
 [Library( "dmc_ammobuckshotlarge" )]
 [EditorModel( "models/ammo/buckshot/dm_ammo_buckshot_large.vmdl" )]
-[Display( Name = "Ammo - Buckshot large"), Category( "Ammo" ), Icon( "hdr_auto" )]
+[Title("Ammo - Buckshot large"), Category( "Ammo" ), Icon( "hdr_auto" )]
 partial class AmmoBuckshotLarge : BaseAmmo
 {
 	public override AmmoType AmmoType => AmmoType.Buckshot;
@@ -112,7 +109,7 @@ partial class AmmoBuckshotLarge : BaseAmmo
 /// </summary>
 [Library( "dmc_ammorocket" )]
 [EditorModel( "models/ammo/rocket/dmc_rocketammo.vmdl" )]
-[Display( Name = "Ammo - Rockets"), Category( "Ammo" ), Icon( "hdr_auto" )]
+[Title("Ammo - Rockets"), Category( "Ammo" ), Icon( "hdr_auto" )]
 partial class AmmoRocket : BaseAmmo
 {
 	public override AmmoType AmmoType => AmmoType.Rocket;
@@ -127,7 +124,7 @@ partial class AmmoRocket : BaseAmmo
 /// </summary>
 [Library( "dmc_ammorocketlarge" )]
 [EditorModel( "models/ammo/rocket/dmc_rocketammo_large.vmdl")]
-[Display( Name = "Ammo - Rockets Large"), Category( "Ammo" ), Icon( "hdr_auto" )]
+[Title("Ammo - Rockets Large"), Category( "Ammo" ), Icon( "hdr_auto" )]
 partial class AmmoRocketLarge : BaseAmmo
 {
 	public override AmmoType AmmoType => AmmoType.Rocket;
@@ -142,7 +139,7 @@ partial class AmmoRocketLarge : BaseAmmo
 /// </summary>
 [Library( "dmc_ammonails" )]
 [EditorModel( "models/ammo/dm_placeholderammo.vmdl" )]
-[Display( Name = "Ammo - Nails"), Category( "Ammo" ), Icon( "hdr_auto" )]
+[Title("Ammo - Nails"), Category( "Ammo" ), Icon( "hdr_auto" )]
 partial class AmmoNailgun : BaseAmmo
 {
 	public override AmmoType AmmoType => AmmoType.Nail;
@@ -157,7 +154,7 @@ partial class AmmoNailgun : BaseAmmo
 /// </summary>
 [Library( "dmc_ammonailslarge" )]
 [EditorModel( "models/ammo/dm_placeholderammo.vmdl" )]
-[Display( Name = "Ammo - Nails Large"), Category( "Ammo" ), Icon( "hdr_auto" )]
+[Title( "Ammo - Nails Large" ), Category( "Ammo" ), Icon( "hdr_auto" )]
 partial class AmmoNailgunLarge : BaseAmmo
 {
 	public override AmmoType AmmoType => AmmoType.Nail;
@@ -172,7 +169,7 @@ partial class AmmoNailgunLarge : BaseAmmo
 /// </summary>
 [Library( "dmc_ammobattery" )]
 [EditorModel( "models/items/battery/dmc_battery.vmdl" )]
-[Display( Name = "Ammo - Batterycell"), Category( "Ammo" ), Icon( "hdr_auto" )]
+[Title( "Ammo - Batterycell" ), Category( "Ammo" ), Icon( "hdr_auto" )]
 partial class AmmoBattery : BaseAmmo
 {
 	public override AmmoType AmmoType => AmmoType.Cell;
@@ -187,7 +184,7 @@ partial class AmmoBattery : BaseAmmo
 /// </summary>
 [Library( "dmc_ammobatterylarge" )]
 [EditorModel( "models/items/battery/dmc_batterylarge.vmdl" )]
-[Display( Name = "Ammo - Batterycell Large"), Category( "Ammo" ), Icon( "hdr_auto" )]
+[Title( "Ammo - Batterycell Large"), Category( "Ammo" ), Icon( "hdr_auto" )]
 partial class AmmoBatteryLarge : BaseAmmo
 {
 	public override AmmoType AmmoType => AmmoType.Cell;

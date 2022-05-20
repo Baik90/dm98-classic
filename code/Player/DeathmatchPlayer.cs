@@ -1,4 +1,5 @@
-﻿public partial class DeathmatchPlayer : Player
+﻿using SandboxEditor;
+public partial class DeathmatchPlayer : Player
 {
 	TimeSince timeSinceDropped;
 
@@ -58,7 +59,7 @@
 		base.Respawn();
 	}
 
-	[AdminCmd]
+	[ConCmd.Admin]
 	public static void GiveAll()
 	{
 		var ply = ConsoleSystem.Caller.Pawn as DeathmatchPlayer;
@@ -351,7 +352,7 @@
 		Sound.FromScreen( sound );
 	}
 
-	[ClientCmd]
+	[ConCmd.Client]
 	public static void InflictDamage()
 	{
 		if ( Local.Pawn is DeathmatchPlayer ply )
@@ -390,7 +391,7 @@
 		tr.Surface.DoFootstep( this, tr, foot, volume * 10 );
 	}
 
-	[AdminCmd]
+	[ConCmd.Admin]
 	public static void MapVote()
 	{
 		var vote = new MapVoteEntity();

@@ -1,12 +1,13 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using SandboxEditor;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
 
 /// <summary>
 /// Gives 200 Armor
 /// </summary>
 [Library( "dmc_redarmor", Title = "Red Armor" )]
-[Hammer.EditorModel( "models/items/armor/armor_red.vmdl" )]
-[Display( Name = "Red Armor" ), Category( "Armor" ), Icon( "security" )]
+[EditorModel( "models/items/armor/armor_red.vmdl" )]
+[Title("Red Armor" ), Category( "Armor" ), Icon( "security" )]
 partial class ArmorRed : ModelEntity, IRespawnableEntity
 {
 	public static readonly Model WorldModel = Model.Load( "models/items/armor/armor_red.vmdl" );

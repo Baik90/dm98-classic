@@ -1,13 +1,11 @@
 ﻿using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
-
 
 /// <summary>
 /// It Clues in the name
 /// </summary>
 [Library( "dmc_grenadelauncher", Title = "Grenadelauncher" )]
-[Hammer.EditorModel( "models/weapons/grenadelauncher/w_grenadelauncher.vmdl" )]
-[Display( Name = "Grenadelauncher"), Category( "Weapon" ), Icon( "colorize" )]
+[EditorModel( "models/weapons/grenadelauncher/w_grenadelauncher.vmdl" )]
+[Title("Grenadelauncher"), Category( "Weapon" ), Icon( "colorize" )]
 partial class Grenadelauncher : DeathmatchWeapon
 {
 	public static readonly Model WorldModel = Model.Load( "models/weapons/grenadelauncher/w_grenadelauncher.vmdl" );
@@ -70,7 +68,7 @@ partial class Grenadelauncher : DeathmatchWeapon
 	{
 		base.Simulate( cl );
 
-		Zoomed = Input.Down( InputButton.Attack2 );
+		Zoomed = Input.Down( InputButton.PrimaryAttack );
 	}
 
 
@@ -94,13 +92,9 @@ partial class Grenadelauncher : DeathmatchWeapon
 
 		Host.AssertClient();
 
-		if ( Owner == Local.Pawn )
-		{
-			new Sandbox.ScreenShake.Perlin( 0.5f, 4.0f, 1.0f, 0.5f );
-		}
+
 
 		ViewModelEntity?.SetAnimParameter( "fire", true );
-		CrosshairPanel?.CreateEvent( "fire" );
 	}
 }
 

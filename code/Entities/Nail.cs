@@ -1,5 +1,5 @@
 ﻿[Library( "Nails" )]
-[Hammer.Skip]
+[HideInEditor]
 partial class Nail : ModelEntity
 {
 	public static readonly Model WorldModel = Model.Load( "models/items/projectile_nail/projectile_nail.vmdl" );

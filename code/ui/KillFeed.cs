@@ -1,21 +1,35 @@
-﻿using Sandbox.UI;
+﻿using Sandbox;
+using Sandbox.UI;
+using Sandbox.UI.Construct;
+using System;
+using System.Threading.Tasks;
 
-public partial class KillFeed : Sandbox.UI.KillFeed
+namespace Sandbox.UI
 {
-	public override Panel AddEntry( long lsteamid, string left, long rsteamid, string right, string method )
+	public partial class KillFeed : Panel
 	{
-		Log.Info( $"{left} killed {right} using {method}" );
+		public static KillFeed Current;
 
-		var e = Current.AddChild<KillFeedEntry>();
+		public KillFeed()
+		{
+			Current = this;
 
-		e.AddClass( method );
+			StyleSheet.Load( "/ui/killfeed/KillFeed.scss" );
+		}
 
-		e.Left.Text = left;
-		e.Left.SetClass( "me", lsteamid == Local.PlayerId );
+		public virtual Panel AddEntry( long lsteamid, string left, long rsteamid, string right, string method )
+		{
+			var e = Current.AddChild<KillFeedEntry>();
 
-		e.Right.Text = right;
-		e.Right.SetClass( "me", rsteamid == Local.PlayerId );
+			e.Left.Text = left;
+			e.Left.SetClass( "me", lsteamid == (Local.Client?.PlayerId) );
 
-		return e;
+			e.Method.Text = method;
+
+			e.Right.Text = right;
+			e.Right.SetClass( "me", rsteamid == (Local.Client?.PlayerId) );
+
+			return e;
+		}
 	}
 }

@@ -1,12 +1,10 @@
 ﻿using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
-
 /// <summary>
 /// Not a Tool
 /// </summary>
 [Library( "dmc_nailgun", Title = "Nailgun" )]
-[Hammer.EditorModel( "weapons/rust_smg/rust_smg.vmdl" )]
-[Display( Name = "Nailgun"), Category( "Weapon" ), Icon( "colorize" )]
+[EditorModel( "weapons/rust_smg/rust_smg.vmdl" )]
+[Title("Nailgun"), Category( "Weapon" ), Icon( "colorize" )]
 partial class Nailgun : DeathmatchWeapon
 {
 	public static readonly Model WorldModel = Model.Load( "weapons/rust_smg/rust_smg.vmdl" );
@@ -62,7 +60,7 @@ partial class Nailgun : DeathmatchWeapon
 	{
 		base.Simulate( cl );
 
-		Zoomed = Input.Down( InputButton.Attack2 );
+		Zoomed = Input.Down( InputButton.SecondaryAttack );
 	}
 
 	public override void PostCameraSetup( ref CameraSetup camSetup )
@@ -89,12 +87,7 @@ partial class Nailgun : DeathmatchWeapon
 	{
 		Host.AssertClient();
 
-		if ( Owner == Local.Pawn )
-		{
-			new Sandbox.ScreenShake.Perlin( 0.5f, 4.0f, 1.0f, 0.5f );
-		}
 
 		ViewModelEntity?.SetAnimParameter( "fire", true );
-		CrosshairPanel?.CreateEvent( "fire" );
 	}
 }

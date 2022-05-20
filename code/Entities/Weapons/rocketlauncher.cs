@@ -1,12 +1,10 @@
 ﻿using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
-
 /// <summary>
 /// Shoots explosiv Rockets
 /// </summary>
 [Library( "dmc_rocketlauncher", Title = "Rocketlauncher" )]
-[Hammer.EditorModel( "models/weapons/rocketlauncher/w_rocketlauncher.vmdl" )]
-[Display( Name = "Rocketlauncher"), Category( "Weapon" ), Icon( "colorize" )]
+[EditorModel( "models/weapons/rocketlauncher/w_rocketlauncher.vmdl" )]
+[Title("Rocketlauncher"), Category( "Weapon" ), Icon( "colorize" )]
 partial class Rocketlauncher : DeathmatchWeapon
 {
 	public static readonly Model WorldModel = Model.Load( "models/weapons/rocketlauncher/w_rocketlauncher.vmdl" );
@@ -62,7 +60,7 @@ partial class Rocketlauncher : DeathmatchWeapon
 	{
 		base.Simulate( cl );
 
-		Zoomed = Input.Down( InputButton.Attack2 );
+		Zoomed = Input.Down( InputButton.SecondaryAttack );
 	}
 
 	public override void PostCameraSetup( ref CameraSetup camSetup )
@@ -89,13 +87,7 @@ partial class Rocketlauncher : DeathmatchWeapon
 	{
 		Host.AssertClient();
 
-		if ( Owner == Local.Pawn )
-		{
-			new Sandbox.ScreenShake.Perlin( 0.5f, 4.0f, 1.0f, 0.5f );
-		}
-
 		ViewModelEntity?.SetAnimParameter( "fire", true );
-		CrosshairPanel?.CreateEvent( "fire" );
 	}
 	public override void SimulateAnimator( PawnAnimator anim )
 	{

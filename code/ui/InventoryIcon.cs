@@ -9,7 +9,7 @@ class InventoryIcon : Panel
 	{
 		Weapon = weapon;
 		Icon = Add.Panel( "icon" );
-		AddClass( weapon.ClassInfo.Name );
+		AddClass( weapon.ClassName );
 	}
 
 	internal void TickSelection( DeathmatchWeapon selectedWeapon )
