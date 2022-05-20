@@ -1,11 +1,12 @@
 ﻿using System.ComponentModel;
-
+using SandboxEditor;
 /// <summary>
 /// It Clues in the name
 /// </summary>
 [Library( "dmc_grenadelauncher", Title = "Grenadelauncher" )]
 [EditorModel( "models/weapons/grenadelauncher/w_grenadelauncher.vmdl" )]
 [Title("Grenadelauncher"), Category( "Weapon" ), Icon( "colorize" )]
+[HammerEntity]
 partial class Grenadelauncher : DeathmatchWeapon
 {
 	public static readonly Model WorldModel = Model.Load( "models/weapons/grenadelauncher/w_grenadelauncher.vmdl" );

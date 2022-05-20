@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using SandboxEditor;
 partial class BaseAmmo : ModelEntity, IRespawnableEntity
 {
 	//public static Model WorldModel = Model.Load( "models/dm_battery.vmdl" );
@@ -80,6 +81,7 @@ partial class Ammo9mmBox : BaseAmmo
 [Library( "dm_ammobuckshot" )]
 [EditorModel( "models/ammo/buckshot/dm_ammo_buckshot.vmdl" )]
 [Title("Ammo - Buckshot"), Category( "Ammo" ), Icon( "hdr_auto" )]
+[HammerEntity]
 partial class AmmoBuckshot : BaseAmmo
 {
 	public override AmmoType AmmoType => AmmoType.Buckshot;
@@ -95,6 +97,7 @@ partial class AmmoBuckshot : BaseAmmo
 [Library( "dmc_ammobuckshotlarge" )]
 [EditorModel( "models/ammo/buckshot/dm_ammo_buckshot_large.vmdl" )]
 [Title("Ammo - Buckshot large"), Category( "Ammo" ), Icon( "hdr_auto" )]
+[HammerEntity]
 partial class AmmoBuckshotLarge : BaseAmmo
 {
 	public override AmmoType AmmoType => AmmoType.Buckshot;
@@ -110,6 +113,7 @@ partial class AmmoBuckshotLarge : BaseAmmo
 [Library( "dmc_ammorocket" )]
 [EditorModel( "models/ammo/rocket/dmc_rocketammo.vmdl" )]
 [Title("Ammo - Rockets"), Category( "Ammo" ), Icon( "hdr_auto" )]
+[HammerEntity]
 partial class AmmoRocket : BaseAmmo
 {
 	public override AmmoType AmmoType => AmmoType.Rocket;
@@ -125,6 +129,7 @@ partial class AmmoRocket : BaseAmmo
 [Library( "dmc_ammorocketlarge" )]
 [EditorModel( "models/ammo/rocket/dmc_rocketammo_large.vmdl")]
 [Title("Ammo - Rockets Large"), Category( "Ammo" ), Icon( "hdr_auto" )]
+[HammerEntity]
 partial class AmmoRocketLarge : BaseAmmo
 {
 	public override AmmoType AmmoType => AmmoType.Rocket;
@@ -140,6 +145,7 @@ partial class AmmoRocketLarge : BaseAmmo
 [Library( "dmc_ammonails" )]
 [EditorModel( "models/ammo/dm_placeholderammo.vmdl" )]
 [Title("Ammo - Nails"), Category( "Ammo" ), Icon( "hdr_auto" )]
+[HammerEntity]
 partial class AmmoNailgun : BaseAmmo
 {
 	public override AmmoType AmmoType => AmmoType.Nail;
@@ -155,6 +161,7 @@ partial class AmmoNailgun : BaseAmmo
 [Library( "dmc_ammonailslarge" )]
 [EditorModel( "models/ammo/dm_placeholderammo.vmdl" )]
 [Title( "Ammo - Nails Large" ), Category( "Ammo" ), Icon( "hdr_auto" )]
+[HammerEntity]
 partial class AmmoNailgunLarge : BaseAmmo
 {
 	public override AmmoType AmmoType => AmmoType.Nail;
@@ -170,6 +177,7 @@ partial class AmmoNailgunLarge : BaseAmmo
 [Library( "dmc_ammobattery" )]
 [EditorModel( "models/items/battery/dmc_battery.vmdl" )]
 [Title( "Ammo - Batterycell" ), Category( "Ammo" ), Icon( "hdr_auto" )]
+[HammerEntity]
 partial class AmmoBattery : BaseAmmo
 {
 	public override AmmoType AmmoType => AmmoType.Cell;
@@ -185,6 +193,7 @@ partial class AmmoBattery : BaseAmmo
 [Library( "dmc_ammobatterylarge" )]
 [EditorModel( "models/items/battery/dmc_batterylarge.vmdl" )]
 [Title( "Ammo - Batterycell Large"), Category( "Ammo" ), Icon( "hdr_auto" )]
+[HammerEntity]
 partial class AmmoBatteryLarge : BaseAmmo
 {
 	public override AmmoType AmmoType => AmmoType.Cell;

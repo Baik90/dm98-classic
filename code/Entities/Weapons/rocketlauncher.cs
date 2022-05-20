@@ -1,10 +1,12 @@
 ﻿using System.ComponentModel;
+using SandboxEditor;
 /// <summary>
 /// Shoots explosiv Rockets
 /// </summary>
 [Library( "dmc_rocketlauncher", Title = "Rocketlauncher" )]
 [EditorModel( "models/weapons/rocketlauncher/w_rocketlauncher.vmdl" )]
 [Title("Rocketlauncher"), Category( "Weapon" ), Icon( "colorize" )]
+[HammerEntity]
 partial class Rocketlauncher : DeathmatchWeapon
 {
 	public static readonly Model WorldModel = Model.Load( "models/weapons/rocketlauncher/w_rocketlauncher.vmdl" );

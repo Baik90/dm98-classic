@@ -4,7 +4,7 @@ public class Crosshair : Panel
 {
 	int fireCounter;
 
-	public Crosshair()
+	public  Crosshair()
 	{
 		for ( int i = 0; i < 5; i++ )
 		{

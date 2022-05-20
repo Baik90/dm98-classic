@@ -1,10 +1,12 @@
 ﻿using System.ComponentModel;
+using SandboxEditor;
 /// <summary>
 /// Not a Tool
 /// </summary>
 [Library( "dmc_nailgun", Title = "Nailgun" )]
 [EditorModel( "weapons/rust_smg/rust_smg.vmdl" )]
-[Title("Nailgun"), Category( "Weapon" ), Icon( "colorize" )]
+[Title( "Nailgun"), Category( "Weapon" ), Icon( "colorize" )]
+[HammerEntity]
 partial class Nailgun : DeathmatchWeapon
 {
 	public static readonly Model WorldModel = Model.Load( "weapons/rust_smg/rust_smg.vmdl" );

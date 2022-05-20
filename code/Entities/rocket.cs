@@ -1,6 +1,4 @@
-﻿
-using SandboxEditor;
-[Library( "dmc_rocket", Title = "Rocket" )]
+﻿[Library( "dmc_rocket", Title = "Rocket" )]
 [HideInEditor]
 partial class Rocket : BasePhysics
 {

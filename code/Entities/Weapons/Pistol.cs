@@ -1,7 +1,9 @@
 ﻿using System.ComponentModel;
+using SandboxEditor;
 [Library( "dm_pistol", Title = "Pistol" )]
 [EditorModel( "weapons/rust_pistol/rust_pistol.vmdl" )]
 [Title("Pistol REMOVE" ), Category( "Weapon" ), Icon( "colorize" )]
+[HammerEntity]
 partial class Pistol : DeathmatchWeapon
 {
 	public static readonly Model WorldModel = Model.Load( "weapons/rust_pistol/rust_pistol.vmdl" );

@@ -1,11 +1,12 @@
 ﻿using System.ComponentModel;
-
+using SandboxEditor;
 /// <summary>
 /// Gives 100 Armor
 /// </summary>
 [Library( "dmc_greenarmor", Title = "Green Armor" )]
 [EditorModel( "models/items/armor/armor_green.vmdl" )]
 [Title("Green Armor" ), Category( "Armor" ), Icon( "security" )]
+[HammerEntity]
 partial class ArmorGreen : ModelEntity, IRespawnableEntity
 {
 	public static readonly Model WorldModel = Model.Load( "models/items/armor/armor_green.vmdl" );

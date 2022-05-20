@@ -1,10 +1,12 @@
 ﻿using System.ComponentModel;
+using SandboxEditor;
 /// <summary>
 /// Gives 25 Healthpoints
 /// </summary>
 [Library( "dmc_healthkit_large", Title = "HealthKit Large" )]
 [EditorModel( "models/items/healthkit/healthkit_m.vmdl" )]
 [Title("Large Healthkit"), Category( "Health" ), Icon( "heart_broken" )]
+[HammerEntity]
 partial class HealthKitLarge : ModelEntity, IRespawnableEntity
 {
 	public static readonly Model WorldModel = Model.Load( "models/items/healthkit/healthkit_m.vmdl" );

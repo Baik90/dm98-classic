@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using SandboxEditor;
 
 /// <summary>
 /// Gives 150 Armor
@@ -6,6 +7,7 @@
 [Library( "dmc_yellowarmor", Title = "Yellow Armor" )]
 [EditorModel( "models/items/armor/armor_yellow.vmdl" )]
 [Title("Yellow Armor" ), Category( "Armor" ), Icon( "security" )]
+[HammerEntity]
 partial class ArmorYellow : ModelEntity, IRespawnableEntity
 {
 	public static readonly Model WorldModel = Model.Load( "models/items/armor/armor_yellow.vmdl" );

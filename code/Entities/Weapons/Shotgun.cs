@@ -1,10 +1,12 @@
 ﻿using System.ComponentModel;
+using SandboxEditor;
 /// <summary>
 /// A Shotgun
 /// </summary>
 [Library( "dmc_shotgun", Title = "Shotgun" )]
 [EditorModel( "models/weapons/shotgun/w_shotgun.vmdl" )]
 [Title("Shotgun"), Category( "Weapon" ), Icon( "colorize" )]
+[HammerEntity]
 partial class Shotgun : DeathmatchWeapon
 {
 	public static readonly Model WorldModel = Model.Load( "models/weapons/shotgun/w_shotgun.vmdl" );

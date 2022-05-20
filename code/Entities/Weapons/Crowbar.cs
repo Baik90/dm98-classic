@@ -1,10 +1,12 @@
 ﻿using System.ComponentModel;
+using SandboxEditor;
 /// <summary>
 /// A Crowbar
 /// </summary>
 [Library( "dmc_crowbar", Title = "Crowbar" )]
 [EditorModel( "models/weapons/crowbar/w_crowbar.vmdl" )]
 [Title("Crowbar" ), Category( "Weapon" ), Icon( "colorize" )]
+[HammerEntity]
 partial class Crowbar : DeathmatchWeapon
 {
 	public static Model WorldModel = Model.Load( "models/weapons/crowbar/w_crowbar.vmdl" );
