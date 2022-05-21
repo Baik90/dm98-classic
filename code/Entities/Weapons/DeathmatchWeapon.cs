@@ -1,7 +1,7 @@
 ﻿using SandboxEditor;
 partial class DeathmatchWeapon : BaseWeapon, IRespawnableEntity
 {
-	public virtual AmmoType AmmoType => AmmoType.Pistol;
+	public virtual AmmoType AmmoType => AmmoType.Buckshot;
 	public virtual int ClipSize => 16;
 	public virtual float ReloadTime => 3.0f;
 	public virtual int Bucket => 1;

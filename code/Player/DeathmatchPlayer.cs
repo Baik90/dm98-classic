@@ -64,7 +64,6 @@ public partial class DeathmatchPlayer : Player
 	{
 		var ply = ConsoleSystem.Caller.Pawn as DeathmatchPlayer;
 
-		ply.GiveAmmo( AmmoType.Pistol, 1000 );
 		ply.GiveAmmo( AmmoType.Buckshot, 1000 );
 		ply.GiveAmmo( AmmoType.Rocket, 1000 );
 		ply.GiveAmmo( AmmoType.Cell, 1000 );

@@ -46,36 +46,6 @@ partial class BaseAmmo : ModelEntity, IRespawnableEntity
 
 
 /// <summary>
-/// Remove me!
-/// </summary>
-[Library( "dm_ammo9mmclip" )]
-[EditorModel( "models/dm_ammo_9mmclip.vmdl" )]
-[Title( "Ammo - 17 9mm" )]
-partial class Ammo9mmClip : BaseAmmo
-{
-	public override AmmoType AmmoType => AmmoType.Pistol;
-	public override int AmmoAmount => 17;
-	public override Model WorldModel => Model.Load( "models/dm_ammo_9mmclip.vmdl" );
-
-}
-
-
-/// <summary>
-/// Remove me!
-/// </summary>
-[Library( "dm_ammo9mmbox" )]
-[EditorModel( "models/dm_ammo_9mmbox.vmdl" )]
-[Title("Ammo - 9mm Box" )]
-partial class Ammo9mmBox : BaseAmmo
-{
-	public override AmmoType AmmoType => AmmoType.Pistol;
-	public override int AmmoAmount => 200;
-
-	public override Model WorldModel => Model.Load( "models/dm_ammo_9mmbox.vmdl" );
-}
-
-
-/// <summary>
 /// Gives 20 Buckshot Ammo
 /// </summary>
 [Library( "dm_ammobuckshot" )]

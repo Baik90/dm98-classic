@@ -77,7 +77,6 @@
 	{
 		switch ( ammo )
 		{
-			case AmmoType.Pistol: return 250;
 			case AmmoType.Buckshot: return 100;
 			case AmmoType.Rocket: return 100;
 			case AmmoType.Nail: return 500;
@@ -91,7 +90,6 @@
 public enum AmmoType
 {
 	None,
-	Pistol,
 	Buckshot,
 	Rocket,
 	Nail,
