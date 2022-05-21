@@ -56,19 +56,20 @@ partial class DeathmatchWeapon : BaseWeapon, IRespawnableEntity
 
 	public override void Reload()
 	{
-		if ( IsReloading )
+		/*if ( IsReloading )
 			return;
 
 		if ( AmmoClip >= ClipSize )
 			return;
 
-		TimeSinceReload = 0;
-
-		if ( Owner is DeathmatchPlayer player )
+		TimeSinceReload = 0;*/
+		
+		// Take Ammo?
+		/*if ( Owner is DeathmatchPlayer player )
 		{
 			if ( player.AmmoCount( AmmoType ) <= 0 )
 				return;
-		}
+		}*/
 
 		IsReloading = true;
 
@@ -119,6 +120,7 @@ partial class DeathmatchWeapon : BaseWeapon, IRespawnableEntity
 	{
 		TimeSincePrimaryAttack = 0;
 		TimeSinceSecondaryAttack = 0;
+
 	}
 
 	[ClientRpc]
@@ -185,11 +187,7 @@ partial class DeathmatchWeapon : BaseWeapon, IRespawnableEntity
 		return true;
 	}
 
-	[ClientRpc]
-	public virtual void DryFire()
-	{
-		PlaySound( "dm.dryfire" );
-	}
+
 
 	public override void CreateViewModel()
 	{

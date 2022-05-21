@@ -29,6 +29,7 @@ partial class Shotgun : DeathmatchWeapon
 		AmmoClip = 6;
 	}
 
+
 	public override void Simulate( Client owner )
 	{
 		base.Simulate( owner );
@@ -46,8 +47,6 @@ partial class Shotgun : DeathmatchWeapon
 
 		if ( !TakeAmmo( 1 ) )
 		{
-			DryFire();
-
 			if ( AvailableAmmo() > 0 )
 			{
 				Reload();
@@ -69,33 +68,6 @@ partial class Shotgun : DeathmatchWeapon
 		ShootBullet( 0.2f, 0.3f, 20.0f, 2.0f, 6 );
 	}
 
-	public override void AttackSecondary()
-	{
-		// Dont need Secondary Attack!
-
-		/*TimeSincePrimaryAttack = -0.5f;
-		TimeSinceSecondaryAttack = -0.5f;
-
-		if ( !TakeAmmo( 2 ) )
-		{
-			DryFire();
-			return;
-		}
-
-		(Owner as AnimatedEntity).SetAnimParameter( "b_attack", true );
-
-		//
-		// Tell the clients to play the shoot effects
-		//
-		DoubleShootEffects();
-		PlaySound( "rust_pumpshotgun.shootdouble" );
-
-		//
-		// Shoot the bullets
-		//
-		ShootBullet( 0.4f, 0.3f, 20.0f, 2.0f, 8 );
-		*/
-	}
 
 	[ClientRpc]
 	protected override void ShootEffects()

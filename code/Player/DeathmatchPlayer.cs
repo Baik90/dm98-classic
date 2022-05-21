@@ -50,7 +50,7 @@ public partial class DeathmatchPlayer : Player
 		Inventory.Add( new Crowbar() );
 		Inventory.Add( new Shotgun(), true );
 
-		GiveAmmo( AmmoType.Buckshot, 50 );
+		GiveAmmo( AmmoType.Buckshot, 10 );
 
 		SupressPickupNotices = false;
 		Health = 100;

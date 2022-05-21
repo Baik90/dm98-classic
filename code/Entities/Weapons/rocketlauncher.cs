@@ -33,7 +33,6 @@ partial class Rocketlauncher : DeathmatchWeapon
 	{
 		if ( !TakeAmmo( 1 ) )
 		{
-			DryFire();
 
 			if ( AvailableAmmo() > 0 )
 			{
@@ -51,7 +50,7 @@ partial class Rocketlauncher : DeathmatchWeapon
 		if ( IsServer )
 		{
 			var bolt = new Rocket();
-			bolt.Position = Owner.EyePosition;
+			bolt.Position = Owner.EyePosition + Owner.EyeRotation.Forward * 30.0f;
 			bolt.Rotation = Owner.EyeRotation;
 			bolt.Owner = Owner;
 			bolt.Velocity = Owner.EyeRotation.Forward * 1;
