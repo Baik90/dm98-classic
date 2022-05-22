@@ -113,7 +113,7 @@ partial class AmmoRocketLarge : BaseAmmo
 /// Gives 25 Nails
 /// </summary>
 [Library( "dmc_ammonails" )]
-[EditorModel( "models/ammo/dm_placeholderammo.vmdl" )]
+[EditorModel( "models/ammo/nailammo/dmc_nailammo.vmdl" )]
 [Title("Ammo - Nails"), Category( "Ammo" ), Icon( "hdr_auto" )]
 [HammerEntity]
 partial class AmmoNailgun : BaseAmmo
@@ -121,7 +121,7 @@ partial class AmmoNailgun : BaseAmmo
 	public override AmmoType AmmoType => AmmoType.Nail;
 	public override int AmmoAmount => 25;
 
-	public override Model WorldModel => Model.Load( "models/ammo/dm_placeholderammo.vmdl" );
+	public override Model WorldModel => Model.Load( "models/ammo/nailammo/dmc_nailammo.vmdl" );
 }
 
 
@@ -129,7 +129,7 @@ partial class AmmoNailgun : BaseAmmo
 /// Gives 50 Nails
 /// </summary>
 [Library( "dmc_ammonailslarge" )]
-[EditorModel( "models/ammo/dm_placeholderammo.vmdl" )]
+[EditorModel( "models/ammo/nailammo/dmc_nailammo_large.vmdl" )]
 [Title( "Ammo - Nails Large" ), Category( "Ammo" ), Icon( "hdr_auto" )]
 [HammerEntity]
 partial class AmmoNailgunLarge : BaseAmmo
@@ -137,7 +137,7 @@ partial class AmmoNailgunLarge : BaseAmmo
 	public override AmmoType AmmoType => AmmoType.Nail;
 	public override int AmmoAmount => 50;
 
-	public override Model WorldModel => Model.Load( "models/ammo/dm_placeholderammo.vmdl" );
+	public override Model WorldModel => Model.Load( "models/ammo/nailammo/dmc_nailammo_large.vmdl" );
 }
 
 
