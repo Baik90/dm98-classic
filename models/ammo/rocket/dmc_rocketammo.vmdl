@@ -29,7 +29,25 @@
 				[
 					{
 						_class = "RenderMeshFile"
+						name = "lod0"
 						filename = "models/ammo/rocket/rocket_ammo.dmx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "lod1"
+						filename = "models/ammo/nailammo/rocket_ammo_lod1.dmx"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0
@@ -75,6 +93,28 @@
 						mirror_z = false
 						flip_bone_forward = false
 						swap_left_and_right_bones = false
+					},
+				]
+			},
+			{
+				_class = "LODGroupList"
+				children = 
+				[
+					{
+						_class = "LODGroup"
+						switch_threshold = 0.0
+						meshes = 
+						[
+							"lod0",
+						]
+					},
+					{
+						_class = "LODGroup"
+						switch_threshold = 25.0
+						meshes = 
+						[
+							"lod1",
+						]
 					},
 				]
 			},

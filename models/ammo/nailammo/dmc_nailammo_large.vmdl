@@ -46,39 +46,112 @@
 				children = 
 				[
 					{
-						_class = "RenderMeshFile"
-						filename = "models/ammo/nailammo/nailammo.dmx"
-						import_translation = [ -15.0, -3.0, 0.0 ]
-						import_rotation = [ 0.0, -188.0, 0.0 ]
-						import_scale = 1.0
-						align_origin_x_type = "None"
-						align_origin_y_type = "None"
-						align_origin_z_type = "None"
-						parent_bone = ""
-						import_filter = 
-						{
-							exclude_by_default = false
-							exception_list = 
-							[
-								"Cylinder_019",
-							]
-						}
+						_class = "Folder"
+						name = "LoD0"
+						children = 
+						[
+							{
+								_class = "RenderMeshFile"
+								name = "b1_lod0"
+								filename = "models/ammo/nailammo/nailammo.dmx"
+								import_translation = [ -15.0, -3.0, 0.0 ]
+								import_rotation = [ 0.0, -188.0, 0.0 ]
+								import_scale = 1.0
+								align_origin_x_type = "None"
+								align_origin_y_type = "None"
+								align_origin_z_type = "None"
+								parent_bone = ""
+								import_filter = 
+								{
+									exclude_by_default = false
+									exception_list = [  ]
+								}
+							},
+							{
+								_class = "RenderMeshFile"
+								name = "b2_lod0"
+								filename = "models/ammo/nailammo/nailammo_large.dmx"
+								import_translation = [ 0.0, 0.0, 0.0 ]
+								import_rotation = [ 0.0, 22.0, 0.0 ]
+								import_scale = 1.0
+								align_origin_x_type = "None"
+								align_origin_y_type = "None"
+								align_origin_z_type = "None"
+								parent_bone = ""
+								import_filter = 
+								{
+									exclude_by_default = false
+									exception_list = [  ]
+								}
+							},
+						]
 					},
 					{
-						_class = "RenderMeshFile"
-						filename = "models/ammo/nailammo/nailammo_large.dmx"
-						import_translation = [ 0.0, 0.0, 0.0 ]
-						import_rotation = [ 0.0, 22.0, 0.0 ]
-						import_scale = 1.0
-						align_origin_x_type = "None"
-						align_origin_y_type = "None"
-						align_origin_z_type = "None"
-						parent_bone = ""
-						import_filter = 
-						{
-							exclude_by_default = false
-							exception_list = [  ]
-						}
+						_class = "Folder"
+						name = "LoD1"
+						children = 
+						[
+							{
+								_class = "RenderMeshFile"
+								name = "b1_lod1"
+								filename = "models/ammo/nailammo/nailammo_lod1.dmx"
+								import_translation = [ -15.0, -3.0, 0.0 ]
+								import_rotation = [ 0.0, -188.0, 0.0 ]
+								import_scale = 1.0
+								align_origin_x_type = "None"
+								align_origin_y_type = "None"
+								align_origin_z_type = "None"
+								parent_bone = ""
+								import_filter = 
+								{
+									exclude_by_default = false
+									exception_list = [  ]
+								}
+							},
+							{
+								_class = "RenderMeshFile"
+								name = "b2_lod1"
+								filename = "models/ammo/nailammo/nailammo_large_lod1.dmx"
+								import_translation = [ 0.0, 0.0, 0.0 ]
+								import_rotation = [ 0.0, 22.0, 0.0 ]
+								import_scale = 1.0
+								align_origin_x_type = "None"
+								align_origin_y_type = "None"
+								align_origin_z_type = "None"
+								parent_bone = ""
+								import_filter = 
+								{
+									exclude_by_default = false
+									exception_list = [  ]
+								}
+							},
+						]
+					},
+				]
+			},
+			{
+				_class = "LODGroupList"
+				children = 
+				[
+					{
+						_class = "LODGroup"
+						name = "LevelofDetail0"
+						switch_threshold = 0.0
+						meshes = 
+						[
+							"b1_lod0",
+							"b2_lod0",
+						]
+					},
+					{
+						_class = "LODGroup"
+						name = "LevelofDetail1"
+						switch_threshold = 25.0
+						meshes = 
+						[
+							"b1_lod1",
+							"b2_lod1",
+						]
 					},
 				]
 			},

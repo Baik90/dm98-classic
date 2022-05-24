@@ -119,7 +119,25 @@
 				[
 					{
 						_class = "RenderMeshFile"
+						name = "lod0"
 						filename = "models/items/grenade_projectile/grenade_projectile.dmx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 90.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "lod1"
+						filename = "models/ammo/nailammo/grenade_projectile_lod1.dmx"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 90.0, 0.0, 0.0 ]
 						import_scale = 1.0
@@ -174,6 +192,28 @@
 								hitbox_mins = [ -1.0, -2.629149, -2.629825 ]
 								hitbox_maxs = [ 9.979081, 2.640622, 2.631884 ]
 							},
+						]
+					},
+				]
+			},
+			{
+				_class = "LODGroupList"
+				children = 
+				[
+					{
+						_class = "LODGroup"
+						switch_threshold = 0.0
+						meshes = 
+						[
+							"lod0",
+						]
+					},
+					{
+						_class = "LODGroup"
+						switch_threshold = 25.0
+						meshes = 
+						[
+							"lod1",
 						]
 					},
 				]
