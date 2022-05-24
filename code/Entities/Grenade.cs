@@ -1,6 +1,6 @@
 ﻿[Library( "dmc_grenade", Title = "Grenade" )]
 [HideInEditor]
-partial class Grenade : BasePhysics
+partial class Grenade : ModelEntity
 {
 	public static readonly Model WorldModel = Model.Load( "models/items/grenade_projectile/projectile_grenade.vmdl" );
 
