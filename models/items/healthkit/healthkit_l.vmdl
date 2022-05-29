@@ -15,7 +15,7 @@
 						[
 							{
 								from = "healthkit_l.vmat"
-								to = "dev/helper/testgrid.vmat"
+								to = "materials/items/healthkit_l/healthkit_l.vmat"
 							},
 						]
 						use_global_default = false
