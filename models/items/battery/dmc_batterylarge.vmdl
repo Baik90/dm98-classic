@@ -61,36 +61,110 @@
 				children = 
 				[
 					{
-						_class = "RenderMeshFile"
-						filename = "models/items/battery/battery.dmx"
-						import_translation = [ 0.0, 0.0, 0.0 ]
-						import_rotation = [ 0.0, 45.0, 0.0 ]
-						import_scale = 1.0
-						align_origin_x_type = "None"
-						align_origin_y_type = "None"
-						align_origin_z_type = "None"
-						parent_bone = ""
-						import_filter = 
-						{
-							exclude_by_default = false
-							exception_list = [  ]
-						}
+						_class = "Folder"
+						name = "lod0"
+						children = 
+						[
+							{
+								_class = "RenderMeshFile"
+								name = "b1_lod0"
+								filename = "models/items/battery/battery.dmx"
+								import_translation = [ 0.0, 0.0, 0.0 ]
+								import_rotation = [ 0.0, 45.0, 0.0 ]
+								import_scale = 1.0
+								align_origin_x_type = "None"
+								align_origin_y_type = "None"
+								align_origin_z_type = "None"
+								parent_bone = ""
+								import_filter = 
+								{
+									exclude_by_default = false
+									exception_list = [  ]
+								}
+							},
+							{
+								_class = "RenderMeshFile"
+								name = "b2_lod0"
+								filename = "models/items/battery/battery.dmx"
+								import_translation = [ 20.0, -1.0, 5.5 ]
+								import_rotation = [ 90.0, 120.0, 0.0 ]
+								import_scale = 1.0
+								align_origin_x_type = "None"
+								align_origin_y_type = "None"
+								align_origin_z_type = "None"
+								parent_bone = ""
+								import_filter = 
+								{
+									exclude_by_default = false
+									exception_list = [  ]
+								}
+							},
+						]
 					},
 					{
-						_class = "RenderMeshFile"
-						filename = "models/items/battery/battery.dmx"
-						import_translation = [ 20.0, -1.0, 5.5 ]
-						import_rotation = [ 90.0, 120.0, 0.0 ]
-						import_scale = 1.0
-						align_origin_x_type = "None"
-						align_origin_y_type = "None"
-						align_origin_z_type = "None"
-						parent_bone = ""
-						import_filter = 
-						{
-							exclude_by_default = false
-							exception_list = [  ]
-						}
+						_class = "Folder"
+						name = "lod1"
+						children = 
+						[
+							{
+								_class = "RenderMeshFile"
+								name = "b1_lod1"
+								filename = "models/ammo/nailammo/battery_lod1.dmx"
+								import_translation = [ 0.0, 0.0, 0.0 ]
+								import_rotation = [ 0.0, 45.0, 0.0 ]
+								import_scale = 1.0
+								align_origin_x_type = "None"
+								align_origin_y_type = "None"
+								align_origin_z_type = "None"
+								parent_bone = ""
+								import_filter = 
+								{
+									exclude_by_default = false
+									exception_list = [  ]
+								}
+							},
+							{
+								_class = "RenderMeshFile"
+								name = "b2_lod1"
+								filename = "models/ammo/nailammo/battery_lod1.dmx"
+								import_translation = [ 20.0, -1.0, 5.5 ]
+								import_rotation = [ 90.0, 120.0, 0.0 ]
+								import_scale = 1.0
+								align_origin_x_type = "None"
+								align_origin_y_type = "None"
+								align_origin_z_type = "None"
+								parent_bone = ""
+								import_filter = 
+								{
+									exclude_by_default = false
+									exception_list = [  ]
+								}
+							},
+						]
+					},
+				]
+			},
+			{
+				_class = "LODGroupList"
+				children = 
+				[
+					{
+						_class = "LODGroup"
+						switch_threshold = 0.0
+						meshes = 
+						[
+							"b1_lod0",
+							"b2_lod0",
+						]
+					},
+					{
+						_class = "LODGroup"
+						switch_threshold = 0.0
+						meshes = 
+						[
+							"b1_lod1",
+							"b2_lod1",
+						]
 					},
 				]
 			},

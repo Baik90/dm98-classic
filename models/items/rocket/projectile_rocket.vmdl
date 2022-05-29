@@ -104,7 +104,25 @@
 				[
 					{
 						_class = "RenderMeshFile"
+						name = "lod0"
 						filename = "models/items/rocket/rocket_projectile.dmx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 90.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "lod1"
+						filename = "models/items/rocket/rocket_projectile_lod1.dmx"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 90.0, 0.0, 0.0 ]
 						import_scale = 1.0
@@ -134,6 +152,28 @@
 							attachment_type = "5"
 							attachment_offset = [ 0.0, 0.0, 0.0 ]
 						}
+					},
+				]
+			},
+			{
+				_class = "LODGroupList"
+				children = 
+				[
+					{
+						_class = "LODGroup"
+						switch_threshold = 0.0
+						meshes = 
+						[
+							"lod0",
+						]
+					},
+					{
+						_class = "LODGroup"
+						switch_threshold = 15.0
+						meshes = 
+						[
+							"lod1",
+						]
 					},
 				]
 			},
