@@ -1,5 +1,4 @@
-﻿using SandboxEditor;
-partial class DeathmatchGame : Game
+﻿partial class DeathmatchGame : Game
 {
 	public static GameStates CurrentState => (Current as DeathmatchGame)?.GameState ?? GameStates.Warmup;
 
