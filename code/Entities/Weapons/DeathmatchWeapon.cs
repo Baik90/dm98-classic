@@ -1,4 +1,4 @@
-﻿using SandboxEditor;
+﻿using Sandbox;
 partial class DeathmatchWeapon : BaseWeapon, IRespawnableEntity
 {
 	public virtual AmmoType AmmoType => AmmoType.Buckshot;
