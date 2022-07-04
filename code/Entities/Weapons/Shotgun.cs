@@ -11,7 +11,7 @@ partial class Shotgun : DeathmatchWeapon
 {
 	public static readonly Model WorldModel = Model.Load( "models/weapons/shotgun/w_shotgun.vmdl" );
 	public override string ViewModelPath => "models/weapons/shotgun/v_shotgun.vmdl";
-	public override float PrimaryRate => 1;
+	public override float PrimaryRate => 1f;
 	public override float SecondaryRate => 1;
 	public override AmmoType AmmoType => AmmoType.Buckshot;
 	public override int ClipSize => 8;
@@ -46,13 +46,13 @@ partial class Shotgun : DeathmatchWeapon
 		TimeSinceSecondaryAttack = 0;
 
 		if ( !TakeAmmo( 1 ) )
-		{
+		/*{
 			if ( AvailableAmmo() > 0 )
 			{
 				Reload();
 			}
 			return;
-		}
+		}*/
 
 		(Owner as AnimatedEntity).SetAnimParameter( "b_attack", true );
 

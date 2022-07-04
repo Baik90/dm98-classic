@@ -15,7 +15,7 @@
 				{
 					_class = "CSequenceAnimNode"
 					m_sName = "Unnamed"
-					m_vecPosition = [ -416.0, 368.0 ]
+					m_vecPosition = [ -496.0, 304.0 ]
 					m_nNodeID = 
 					{
 						m_id = 225371248
@@ -31,21 +31,21 @@
 			{
 				key = 
 				{
-					m_id = 1184574287
+					m_id = 753735907
 				}
 				value = 
 				{
 					_class = "CSequenceAnimNode"
 					m_sName = "Unnamed"
-					m_vecPosition = [ -416.0, 272.0 ]
+					m_vecPosition = [ -496.0, 240.0 ]
 					m_nNodeID = 
 					{
-						m_id = 1184574287
+						m_id = 753735907
 					}
 					m_networkMode = "ServerAuthoritative"
 					m_sNote = ""
 					m_tagSpans = [  ]
-					m_sequenceName = "attack"
+					m_sequenceName = "attackhit"
 					m_playbackSpeed = 1.0
 					m_bLoop = false
 				}
@@ -94,6 +94,40 @@
 									m_destState = 
 									{
 										m_id = 1625672183
+									}
+									m_bReset = true
+									m_resetCycleOption = "Beginning"
+									m_flFixedCycleValue = 0.0
+									m_blendCurve = 
+									{
+										m_vControlPoint1 = [ 0.5, 0.0 ]
+										m_vControlPoint2 = [ 0.5, 1.0 ]
+									}
+									m_bForceFootPlant = false
+									m_bDisabled = false
+								},
+								{
+									_class = "CAnimStateTransition"
+									m_conditions = 
+									[
+										{
+											_class = "CParameterAnimCondition"
+											m_comparisonOp = 0
+											m_paramID = 
+											{
+												m_id = 21020406
+											}
+											m_comparisonValue = 
+											{
+												m_nType = 1
+												m_data = true
+											}
+										},
+									]
+									m_blendDuration = 0.2
+									m_destState = 
+									{
+										m_id = 441917709
 									}
 									m_bReset = true
 									m_resetCycleOption = "Beginning"
@@ -184,12 +218,12 @@
 								},
 							]
 							m_tagBehaviors = [ 0 ]
-							m_name = "attack"
+							m_name = "attackhit"
 							m_inputConnection = 
 							{
 								m_nodeID = 
 								{
-									m_id = 1184574287
+									m_id = 753735907
 								}
 								m_outputID = 
 								{
@@ -264,6 +298,81 @@
 							m_bIsRootMotionExclusive = false
 							m_bAlwaysEvaluate = false
 						},
+						{
+							_class = "CAnimState"
+							m_transitions = 
+							[
+								{
+									_class = "CAnimStateTransition"
+									m_conditions = 
+									[
+										{
+											_class = "CParameterAnimCondition"
+											m_comparisonOp = 0
+											m_paramID = 
+											{
+												m_id = 21020406
+											}
+											m_comparisonValue = 
+											{
+												m_nType = 1
+												m_data = false
+											}
+										},
+										{
+											_class = "CFinishedCondition"
+											m_comparisonOp = 0
+											m_option = "FinishedConditionOption_OnFinished"
+											m_bIsFinished = true
+										},
+									]
+									m_blendDuration = 0.2
+									m_destState = 
+									{
+										m_id = 1179120882
+									}
+									m_bReset = true
+									m_resetCycleOption = "Beginning"
+									m_flFixedCycleValue = 0.0
+									m_blendCurve = 
+									{
+										m_vControlPoint1 = [ 0.5, 0.0 ]
+										m_vControlPoint2 = [ 0.5, 1.0 ]
+									}
+									m_bForceFootPlant = false
+									m_bDisabled = false
+								},
+							]
+							m_tags = 
+							[
+								{
+									m_id = 1312775161
+								},
+							]
+							m_tagBehaviors = [ 0 ]
+							m_name = "attackmiss"
+							m_inputConnection = 
+							{
+								m_nodeID = 
+								{
+									m_id = 1868809732
+								}
+								m_outputID = 
+								{
+									m_id = 4294967295
+								}
+							}
+							m_stateID = 
+							{
+								m_id = 441917709
+							}
+							m_position = [ 32.0, -128.0 ]
+							m_bIsStartState = false
+							m_bIsEndtState = false
+							m_bIsPassthrough = false
+							m_bIsRootMotionExclusive = false
+							m_bAlwaysEvaluate = false
+						},
 					]
 					m_bBlockWaningTags = false
 					m_bLockStateWhenWaning = false
@@ -288,6 +397,28 @@
 					m_sequenceName = "deploy"
 					m_nFrameIndex = 10
 					m_tagSpans = [  ]
+				}
+			},
+			{
+				key = 
+				{
+					m_id = 1868809732
+				}
+				value = 
+				{
+					_class = "CSequenceAnimNode"
+					m_sName = "Unnamed"
+					m_vecPosition = [ -531.435425, 414.801819 ]
+					m_nNodeID = 
+					{
+						m_id = 1868809732
+					}
+					m_networkMode = "ServerAuthoritative"
+					m_sNote = ""
+					m_tagSpans = [  ]
+					m_sequenceName = "attackmiss"
+					m_playbackSpeed = 1.0
+					m_bLoop = false
 				}
 			},
 			{
@@ -328,10 +459,24 @@
 		[
 			{
 				_class = "CBoolAnimParameter"
-				m_name = "attack"
+				m_name = "attackhit"
 				m_id = 
 				{
 					m_id = 873492605
+				}
+				m_previewButton = "ANIMPARAM_BUTTON_NONE"
+				m_bNetwork = false
+				m_bUseMostRecentValue = false
+				m_bAutoReset = true
+				m_bPredicted = false
+				m_bDefaultValue = false
+			},
+			{
+				_class = "CBoolAnimParameter"
+				m_name = "attackmiss"
+				m_id = 
+				{
+					m_id = 21020406
 				}
 				m_previewButton = "ANIMPARAM_BUTTON_NONE"
 				m_bNetwork = false

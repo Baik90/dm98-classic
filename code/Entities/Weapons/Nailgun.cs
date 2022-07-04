@@ -32,7 +32,7 @@ partial class Nailgun : DeathmatchWeapon
 	public override void AttackPrimary()
 	{
 		if ( !TakeAmmo( 1 ) )
-		{
+		/*{
 
 
 			if ( AvailableAmmo() > 0 )
@@ -40,7 +40,7 @@ partial class Nailgun : DeathmatchWeapon
 				Reload();
 			}
 			return;
-		}
+		}*/
 
 		ShootEffects();
 		PlaySound( "rust_crossbow.shoot" );

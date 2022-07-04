@@ -1,5 +1,5 @@
-﻿using System.ComponentModel;
-using SandboxEditor;
+﻿using SandboxEditor;
+
 /// <summary>
 /// A Crowbar
 /// </summary>
@@ -62,7 +62,8 @@ partial class Crowbar : DeathmatchWeapon
 
 			tr.Entity.TakeDamage( damageInfo );
 		}
-		ViewModelEntity?.SetAnimParameter( "attack", true );
+		ViewModelEntity?.SetAnimParameter( "attackmiss", true );
+		ViewModelEntity?.SetAnimParameter( "attackmiss", true );
 		if ( Owner is DeathmatchPlayer player )
 		{
 			player.SetAnimParameter( "b_attack", true );

@@ -22,7 +22,10 @@
 						import_filter = 
 						{
 							exclude_by_default = false
-							exception_list = [  ]
+							exception_list = 
+							[
+								"Cylinder_012",
+							]
 						}
 					},
 				]
@@ -132,7 +135,7 @@
 					},
 					{
 						_class = "AnimFile"
-						name = "attack"
+						name = "attackhit"
 						activity_name = ""
 						activity_weight = 1
 						weight_list_name = ""
@@ -144,7 +147,28 @@
 						hidden = false
 						anim_markup_ordered = false
 						disable_compression = false
-						source_filename = "models/weapons/crowbar/anims/crowbar_attack.dmx"
+						source_filename = "models/weapons/crowbar/anims/crowbar_attackhit1.dmx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "attackmiss"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/weapons/crowbar/anims/crowbar_attackmiss.dmx"
 						start_frame = -1
 						end_frame = -1
 						framerate = -1.0

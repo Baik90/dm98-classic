@@ -1,4 +1,5 @@
-﻿using Sandbox;
+﻿using System.ComponentModel.DataAnnotations;
+using SandboxEditor;
 partial class DeathmatchWeapon : BaseWeapon, IRespawnableEntity
 {
 	public virtual AmmoType AmmoType => AmmoType.Buckshot;
@@ -56,20 +57,6 @@ partial class DeathmatchWeapon : BaseWeapon, IRespawnableEntity
 
 	public override void Reload()
 	{
-		/*if ( IsReloading )
-			return;
-
-		if ( AmmoClip >= ClipSize )
-			return;
-
-		TimeSinceReload = 0;*/
-		
-		// Take Ammo?
-		/*if ( Owner is DeathmatchPlayer player )
-		{
-			if ( player.AmmoCount( AmmoType ) <= 0 )
-				return;
-		}*/
 
 		IsReloading = true;
 
