@@ -14,11 +14,9 @@ partial class BaseAmmo : ModelEntity, IRespawnableEntity
 
 		Model = WorldModel;
 
+		Tags.Add( "trigger" );
 		PhysicsEnabled = true;
-		UsePhysicsCollision = true;
-
-		CollisionGroup = CollisionGroup.Weapon;
-		SetInteractsAs( CollisionLayer.Debris );
+		UsePhysicsCollision = false;
 	}
 
 	public override void Touch( Entity other )

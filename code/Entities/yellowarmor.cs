@@ -17,12 +17,10 @@ partial class ArmorYellow : ModelEntity, IRespawnableEntity
 		base.Spawn();
 
 		Model = WorldModel;
+		Tags.Add( "trigger" );
+		PhysicsEnabled = false;
+		UsePhysicsCollision = false;
 
-		PhysicsEnabled = true;
-		UsePhysicsCollision = true;
-
-		CollisionGroup = CollisionGroup.Weapon;
-		SetInteractsAs( CollisionLayer.Debris );
 	}
 
 	public override void StartTouch( Entity other )

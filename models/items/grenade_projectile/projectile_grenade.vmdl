@@ -74,10 +74,7 @@
 						name = "grenade_projectile_phy"
 						parent_bone = ""
 						surface_prop = "grenade"
-						collision_group = "debris"
-						collision_interact_as = "physics_prop"
-						collision_interact_with = "player"
-						collision_interact_exclude = "water"
+						collision_tags = "solid"
 						recenter_on_parent_bone = false
 						offset_origin = [ 0.0, 0.0, 0.0 ]
 						offset_angles = [ 90.0, 0.0, 0.0 ]
@@ -180,7 +177,7 @@
 				[
 					{
 						_class = "HitboxSet"
-						name = "hitbox"
+						name = "trigger_boom"
 						children = 
 						[
 							{

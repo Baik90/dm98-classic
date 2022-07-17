@@ -31,7 +31,6 @@ partial class Nail : ModelEntity
 
 		var tr = Trace.Ray( start, end )
 				.UseHitboxes()
-				//.HitLayer( CollisionLayer.Water, !InWater )
 				.Ignore( Owner )
 				.Ignore( this )
 				.Size( 1.0f )

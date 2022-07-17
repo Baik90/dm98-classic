@@ -16,11 +16,53 @@
   "Metadata": {
     "MinPlayers": 1,
     "MaxPlayers": 32,
-    "GameNetworkType": 0,
+    "GameNetworkType": "Multiplayer",
     "MapList": [],
-    "MapSelect": 3,
+    "MapSelect": "Official",
     "PerMapRanking": false,
-    "LeaderboardType": 0,
-    "RankType": 0
+    "LeaderboardType": "None",
+    "RankType": "None",
+    "Collision": {
+      "Defaults": {
+        "solid": "Ignore",
+        "trigger": "Trigger",
+        "ladder": "Ignore",
+        "water": "Trigger",
+        "projectile": "Trigger",
+        "pickup": "Trigger"
+      },
+      "Pairs": [
+        {
+          "a": "solid",
+          "b": "solid",
+          "r": "Collide"
+        },
+        {
+          "a": "trigger",
+          "b": "playerclip",
+          "r": "Ignore"
+        },
+        {
+          "a": "trigger",
+          "b": "solid",
+          "r": "Trigger"
+        },
+        {
+          "a": "solid",
+          "b": "trigger",
+          "r": "Collide"
+        },
+        {
+          "a": "playerclip",
+          "b": "solid",
+          "r": "Collide"
+        },
+        {
+          "a": "solid",
+          "b": "projectile",
+          "r": "Trigger"
+        }
+      ]
+    }
   }
 }

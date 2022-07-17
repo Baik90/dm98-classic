@@ -1,6 +1,8 @@
-﻿partial class Coffin : ModelEntity
+﻿using Sandbox;
+partial class Coffin : ModelEntity
 {
 	public static readonly Model WorldModel = Model.Load( "models/items/dm_coffin/dm_coffin.vmdl" );
+
 
 	public List<string> Weapons = new List<string>();
 	public List<int> Ammos = new List<int>();
@@ -10,9 +12,10 @@
 		base.Spawn();
 
 		Model = WorldModel;
-		SetupPhysicsFromModel( PhysicsMotionType.Dynamic );
-		CollisionGroup = CollisionGroup.Weapon;
-		SetInteractsAs( CollisionLayer.Debris );
+		PhysicsEnabled = true;
+		UsePhysicsCollision = false;
+		Tags.Add( "trigger" );
+
 	}
 
 	public void Populate( DeathmatchPlayer player )

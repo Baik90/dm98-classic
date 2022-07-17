@@ -16,12 +16,9 @@ partial class ArmorGreen : ModelEntity, IRespawnableEntity
 		base.Spawn();
 
 		Model = WorldModel;
-
-		PhysicsEnabled = true;
-		UsePhysicsCollision = true;
-
-		CollisionGroup = CollisionGroup.Weapon;
-		SetInteractsAs( CollisionLayer.Debris );
+		Tags.Add( "trigger" );
+		PhysicsEnabled = false;
+		UsePhysicsCollision = false;
 	}
 
 	public override void StartTouch( Entity other )

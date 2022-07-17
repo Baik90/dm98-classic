@@ -13,10 +13,7 @@
 						_class = "PhysicsShapeCylinder"
 						parent_bone = ""
 						surface_prop = "default"
-						collision_group = ""
-						collision_interact_as = ""
-						collision_interact_with = ""
-						collision_interact_exclude = ""
+						collision_tags = "solid"
 						radius = 3.681612
 						point0 = [ 0.0, 0.0, 0.0 ]
 						point1 = [ 0.0, 0.0, 26.998428 ]

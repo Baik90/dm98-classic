@@ -16,6 +16,8 @@ public partial class DeathmatchPlayer : Player
 
 	public DeathmatchPlayer()
 	{
+		Tags.Add( "solid" );
+		Tags.Add( "player" );
 		Inventory = new DmInventory( this );
 	}
 

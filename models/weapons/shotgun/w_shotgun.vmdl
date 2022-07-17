@@ -111,10 +111,7 @@
 						_class = "PhysicsHullFromRender"
 						parent_bone = "hold_r"
 						surface_prop = "metal.weapon"
-						collision_group = ""
-						collision_interact_as = ""
-						collision_interact_with = ""
-						collision_interact_exclude = ""
+						collision_tags = "solid"
 						faceMergeAngle = 20.0
 						maxHullVertices = 32
 					},

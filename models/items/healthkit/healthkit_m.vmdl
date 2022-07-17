@@ -31,10 +31,7 @@
 						_class = "PhysicsShapeBox"
 						parent_bone = ""
 						surface_prop = "default"
-						collision_group = ""
-						collision_interact_as = ""
-						collision_interact_with = ""
-						collision_interact_exclude = ""
+						collision_tags = "solid"
 						origin = [ -0.014625, 0.600395, 3.336811 ]
 						angles = [ 0.0, 0.0, 0.0 ]
 						dimensions = [ 23.130444, 23.120121, 6.636852 ]

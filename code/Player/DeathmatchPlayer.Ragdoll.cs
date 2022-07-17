@@ -14,9 +14,7 @@
 		ent.Rotation = Rotation;
 		ent.MoveType = MoveType.Physics;
 		ent.UsePhysicsCollision = true;
-		ent.SetInteractsAs( CollisionLayer.Debris );
-		ent.SetInteractsWith( CollisionLayer.WORLD_GEOMETRY );
-		ent.SetInteractsExclude( CollisionLayer.Player | CollisionLayer.Debris );
+		ent.Tags.Add( "solid" );
 
 		ent.SetModel( GetModelName() );
 		ent.CopyBonesFrom( this );

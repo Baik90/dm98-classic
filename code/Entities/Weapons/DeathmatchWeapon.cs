@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using SandboxEditor;
+using Sandbox;
 partial class DeathmatchWeapon : BaseWeapon, IRespawnableEntity
 {
 	public virtual AmmoType AmmoType => AmmoType.Buckshot;
@@ -49,10 +50,10 @@ partial class DeathmatchWeapon : BaseWeapon, IRespawnableEntity
 		base.Spawn();
 
 		SetModel( "weapons/rust_pistol/rust_pistol.vmdl" );
+		Tags.Add( "trigger");
+		PhysicsEnabled = true;
+		UsePhysicsCollision = false;
 
-		PickupTrigger = new PickupTrigger();
-		PickupTrigger.Parent = this;
-		PickupTrigger.Position = Position;
 	}
 
 	public override void Reload()
@@ -208,10 +209,7 @@ partial class DeathmatchWeapon : BaseWeapon, IRespawnableEntity
 	{
 		base.OnCarryStart( carrier );
 
-		if ( PickupTrigger.IsValid() )
-		{
-			PickupTrigger.EnableTouch = false;
-		}
+
 	}
 
 	public override void OnCarryDrop( Entity dropper )

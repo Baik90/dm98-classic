@@ -1,4 +1,7 @@
 ﻿using SandboxEditor;
+using Sandbox;
+using System;
+using System.Linq;
 
 /// <summary>
 /// A Crowbar
@@ -26,6 +29,7 @@ partial class Crowbar : DeathmatchWeapon
 
 		Model = WorldModel;
 		AmmoClip = 0;
+
 	}
 
 	public override bool CanPrimaryAttack()
