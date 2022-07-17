@@ -24,7 +24,7 @@ partial class Nailgun : DeathmatchWeapon
 	public override void Spawn()
 	{
 		base.Spawn();
-
+		
 		AmmoClip = 50;
 		Model = WorldModel;
 	}
@@ -32,15 +32,6 @@ partial class Nailgun : DeathmatchWeapon
 	public override void AttackPrimary()
 	{
 		if ( !TakeAmmo( 1 ) )
-		/*{
-
-
-			if ( AvailableAmmo() > 0 )
-			{
-				Reload();
-			}
-			return;
-		}*/
 
 		ShootEffects();
 		PlaySound( "rust_crossbow.shoot" );
