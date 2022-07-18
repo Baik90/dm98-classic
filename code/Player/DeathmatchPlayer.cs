@@ -1,5 +1,4 @@
-﻿using SandboxEditor;
-public partial class DeathmatchPlayer : Player
+﻿public partial class DeathmatchPlayer : Player
 {
 	TimeSince timeSinceDropped;
 

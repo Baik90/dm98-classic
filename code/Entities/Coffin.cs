@@ -1,5 +1,4 @@
-﻿using Sandbox;
-partial class Coffin : ModelEntity
+﻿partial class Coffin : ModelEntity
 {
 	public static readonly Model WorldModel = Model.Load( "models/items/dm_coffin/dm_coffin.vmdl" );
 

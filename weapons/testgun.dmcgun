@@ -2,7 +2,7 @@
 {
 	data = 
 	{
-		Name = "pistol buckshot"
+		Title = "test weapon"
 		Descripton = "test weapon"
 		WorldModel = resource:"weapons/rust_pistol/rust_pistol.vmdl"
 		PrimaryRate = 10.23

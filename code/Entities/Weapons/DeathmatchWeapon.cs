@@ -1,7 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using SandboxEditor;
-using Sandbox;
-partial class DeathmatchWeapon : BaseWeapon, IRespawnableEntity
+﻿partial class DeathmatchWeapon : BaseWeapon, IRespawnableEntity
 {
 	public virtual AmmoType AmmoType => AmmoType.Buckshot;
 	public virtual int ClipSize => 16;

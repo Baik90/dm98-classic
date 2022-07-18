@@ -1,5 +1,5 @@
-﻿using System.ComponentModel;
-using SandboxEditor;
+﻿using SandboxEditor;
+
 /// <summary>
 /// Not a Tool
 /// </summary>

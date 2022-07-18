@@ -1,6 +1,4 @@
-﻿using System.ComponentModel;
-using SandboxEditor;
-
+﻿using SandboxEditor;
 /// <summary>
 /// Gives 150 Armor
 /// </summary>

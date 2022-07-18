@@ -1,5 +1,4 @@
-﻿using System.ComponentModel;
-using SandboxEditor;
+﻿using SandboxEditor;
 /// <summary>
 /// Gives 100 Healthpoints
 /// </summary>

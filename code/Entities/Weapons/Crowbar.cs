@@ -1,7 +1,4 @@
 ﻿using SandboxEditor;
-using Sandbox;
-using System;
-using System.Linq;
 
 /// <summary>
 /// A Crowbar

@@ -1,5 +1,4 @@
-﻿using System.ComponentModel;
-using SandboxEditor;
+﻿using SandboxEditor;
 partial class BaseAmmo : ModelEntity, IRespawnableEntity
 {
 	//public static Model WorldModel = Model.Load( "models/dm_battery.vmdl" );
