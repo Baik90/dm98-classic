@@ -5,15 +5,14 @@ partial class BaseAmmo : ModelEntity, IRespawnableEntity
 
 	public virtual AmmoType AmmoType => AmmoType.None;
 	public virtual int AmmoAmount => 17;
-	public virtual Model WorldModel => Model.Load( "models/dm_battery.vmdl" );
+	public virtual Model WorldModel => Model.Load( "models/ammo/dm_placeholderammo.vmdl" );
 
 	public override void Spawn()
 	{
 		base.Spawn();
 
 		Model = WorldModel;
-
-		Tags.Add( "pickup" );
+		Tags.Add( "trigger" );
 		PhysicsEnabled = true;
 		UsePhysicsCollision = false;
 	}

@@ -17,10 +17,8 @@
     "MinPlayers": 1,
     "MaxPlayers": 32,
     "GameNetworkType": "Multiplayer",
-    "MapList": [
-      "dmc_test"
-    ],
-    "MapSelect": "Official",
+    "MapList": [],
+    "MapSelect": "Tagged",
     "PerMapRanking": false,
     "LeaderboardType": "None",
     "RankType": "None",
