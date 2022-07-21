@@ -15,12 +15,12 @@ partial class HealthKitSmall : ModelEntity, IRespawnableEntity
 		base.Spawn();
 
 		Model = WorldModel;
-		Tags.Add( "trigger" );
+		Tags.Add( "pickup" );
 		PhysicsEnabled = false;
 		UsePhysicsCollision = false;
 
 	}
-
+	
 	public override void StartTouch( Entity other )
 	{
 		base.StartTouch( other );

@@ -13,7 +13,7 @@ partial class BaseAmmo : ModelEntity, IRespawnableEntity
 
 		Model = WorldModel;
 
-		Tags.Add( "trigger" );
+		Tags.Add( "pickup" );
 		PhysicsEnabled = true;
 		UsePhysicsCollision = false;
 	}

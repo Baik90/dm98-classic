@@ -15,7 +15,7 @@ partial class HealthKitLarge : ModelEntity, IRespawnableEntity
 		base.Spawn();
 
 		Model = WorldModel;
-		Tags.Add( "trigger" );
+		Tags.Add( "pickup" );
 		PhysicsEnabled = false;
 		UsePhysicsCollision = false;
 
