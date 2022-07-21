@@ -12,15 +12,14 @@
 		var ent = new ModelEntity();
 		ent.Position = Position;
 		ent.Rotation = Rotation;
-		ent.MoveType = MoveType.Physics;
 		ent.UsePhysicsCollision = true;
 		ent.Tags.Add( "solid" );
-
 		ent.SetModel( GetModelName() );
 		ent.CopyBonesFrom( this );
 		ent.TakeDecalsFrom( this );
 		ent.SetRagdollVelocityFrom( this );
 		ent.DeleteAsync( 20.0f );
+		ent.PhysicsEnabled = true;
 
 		// Copy the clothes over
 		foreach ( var child in Children )

@@ -3,7 +3,6 @@
 public class WeaponResource : GameResource
 {
 
-	[HammerEntity]
 	public string Title { get; set; }
 	public string Descripton { get; set; }
 
