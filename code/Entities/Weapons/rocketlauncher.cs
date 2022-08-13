@@ -31,14 +31,7 @@ partial class Rocketlauncher : DeathmatchWeapon
 	public override void AttackPrimary()
 	{
 		if ( !TakeAmmo( 1 ) )
-		{
 
-			if ( AvailableAmmo() > 0 )
-			{
-				Reload();
-			}
-			return;
-		}
 
 		ShootEffects();
 		PlaySound( "rust_crossbow.shoot" );
