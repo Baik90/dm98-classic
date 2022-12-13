@@ -11,3 +11,4 @@ Properties/launchSettings.json
 .vs
 *.sln
 *.generated.vtex_c
+*.meta
